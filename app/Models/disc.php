@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disc extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'album_id',
+        'name'
+    ];
 }

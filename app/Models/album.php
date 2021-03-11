@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'format',
+        'album_listing_id'
+    ];
 }
