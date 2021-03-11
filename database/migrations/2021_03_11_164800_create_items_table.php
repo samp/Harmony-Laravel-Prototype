@@ -16,8 +16,13 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('size');
-            $table->decimal('price', 9, 3);
+            $table->unsignedBigInteger('item_listing_id');
             $table->timestamps();
+
+            $table->foreign('item_listing_id')
+                ->references('id')
+                ->on('item_listings')
+                ->onDelete('cascade');
         });
     }
 

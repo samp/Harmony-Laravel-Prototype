@@ -14,8 +14,16 @@ class CreateAlbumsTable extends Migration
     public function up()
     {
         Schema::create('albums', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('format');
+            $table->string('discs');
+            $table->unsignedBigInteger('album_listing_id');
             $table->timestamps();
+
+            $table->foreign('album_listing_id')
+                ->references('id')
+                ->on('album_listings')
+                ->onDelete('cascade');
         });
     }
 

@@ -14,8 +14,17 @@ class CreateTracksTable extends Migration
     public function up()
     {
         Schema::create('tracks', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('formats');
+            $table->string('length');
+            $table->unsignedBigInteger('disc_id');
             $table->timestamps();
+
+            $table->foreign('disc_id')
+                ->references('id')
+                ->on('discs')
+                ->onDelete('cascade');
         });
     }
 
