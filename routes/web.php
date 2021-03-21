@@ -35,5 +35,14 @@ Route::post('/admin/disc/create', [App\Http\Controllers\DiscController::class, '
 Route::get('/admin/track', [App\Http\Controllers\TrackController::class, 'index'])->name('admin.track');
 Route::get('/admin/track/create', [App\Http\Controllers\TrackController::class, 'create'])->name('admin.track.create');
 Route::post('/admin/track/create', [App\Http\Controllers\TrackController::class, 'store']);
+Route::get('/admin/event', [App\Http\Controllers\EventController::class, 'index'])->name('admin.event');
+Route::get('/admin/event/create', [App\Http\Controllers\EventController::class, 'create'])->name('admin.event.create');
+Route::post('/admin/event/create', [App\Http\Controllers\EventController::class, 'store']);
+Route::get('/admin/itemlisting', [App\Http\Controllers\ItemListingController::class, 'index'])->name('admin.itemlisting');
+Route::get('/admin/itemlisting/create', [App\Http\Controllers\ItemListingController::class, 'create'])->name('admin.itemlisting.create');
+Route::post('/admin/itemlisting/create', [App\Http\Controllers\ItemListingController::class, 'store']);
+Route::get('/admin/item', [App\Http\Controllers\ItemController::class, 'index'])->name('admin.item');
+Route::get('/admin/item/create', [App\Http\Controllers\ItemController::class, 'create'])->name('admin.item.create');
+Route::post('/admin/item/create', [App\Http\Controllers\ItemController::class, 'store']);
 
 require __DIR__.'/auth.php';

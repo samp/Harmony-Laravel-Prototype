@@ -17,7 +17,7 @@ class CreateItemListingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('keywords');
-            $table->decimal('price', 9, 3);
+            $table->decimal('price', 9, 2);
             $table->timestamps();
             
         });

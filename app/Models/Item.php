@@ -12,4 +12,9 @@ class Item extends Model
         'size',
         'item_listing_id'
     ];
+
+    public function itemListing()
+    {
+        return $this->belongsTo(ItemListing::class);
+    }
 }
