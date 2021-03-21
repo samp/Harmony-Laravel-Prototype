@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
+Route::get('/music', [App\Http\Controllers\SearchController::class, 'index'])->name('music');
+Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
+Route::get('/merch', [App\Http\Controllers\SearchController::class, 'index'])->name('merch');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
 require __DIR__.'/auth.php';
