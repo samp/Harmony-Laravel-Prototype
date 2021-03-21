@@ -11,4 +11,14 @@ class Disc extends Model
         'album_id',
         'name'
     ];
+
+    public function album()
+    {
+        return $this->belongsTo(Album::class);
+    }
+
+    public function tracks()
+    {
+        return $this->hasMany(Track::class);
+    }
 }

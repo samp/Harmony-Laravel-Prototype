@@ -9,7 +9,26 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
                 <div class="p-6">
-                    <p>admin</p>
+                <ul>
+                    @foreach($albumlistings as $albumlisting)
+                        <li>{{ $albumlisting->artist }} - {{ $albumlisting->name }} ({{ $albumlisting->description }})</li>
+                        <ul>
+                        @foreach($albumlisting->albums as $album)
+                            <li>{{ $album->format }}</li>
+                            <ul>
+                            @foreach($album->discs as $disc)
+                                <li>{{ $disc->name }}</li>          
+                                <ul>
+                                 @foreach($disc->tracks as $track)
+                                    <li>{{ $track->name }} ({{ $track->length}})</li>                           
+                                @endforeach         
+                                </ul>        
+                            @endforeach
+                            </ul> 
+                        @endforeach
+                        </ul> 
+                    @endforeach
+                </ul>
                 </div>
             </div>
         </div>
