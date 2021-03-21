@@ -13,4 +13,9 @@ class AlbumListing extends Model
         'description',
         'cover_image'
     ];
+
+    public function albums()
+    {
+        return $this->hasMany(Album::class);
+    }
 }

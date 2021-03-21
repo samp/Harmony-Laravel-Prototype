@@ -16,7 +16,6 @@ class CreateTracksTable extends Migration
         Schema::create('tracks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('formats');
             $table->string('length');
             $table->unsignedBigInteger('disc_id');
             $table->timestamps();

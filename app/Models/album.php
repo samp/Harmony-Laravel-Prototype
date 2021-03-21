@@ -11,4 +11,14 @@ class Album extends Model
         'format',
         'album_listing_id'
     ];
+
+    public function albumListing()
+    {
+        return $this->belongsTo(AlbumListing::class);
+    }
+
+    public function discs()
+    {
+        return $this->hasMany(Disc::class);
+    }
 }
