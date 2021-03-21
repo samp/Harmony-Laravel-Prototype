@@ -25,7 +25,7 @@ class ItemController extends Controller
     {
         $attributes = request()->validate([
             'size' => ['required'],
-            'item_listing_id' => ['required'],
+            'item_listing_id' => ['required', 'exists:item_listings,id'],
         ]);
         Item::create($attributes);
         

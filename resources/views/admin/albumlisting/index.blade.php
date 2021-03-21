@@ -15,7 +15,7 @@
                         <img src="/storage/{{ $albumlisting->cover_image }}"> 
                     @endforeach
 
-                    <a href="/admin/albumlisting/create">Create</a>
+                    <a href="{{ route('admin.albumlisting.create') }}">Create</a>
                 </div>
             </div>
         </div>

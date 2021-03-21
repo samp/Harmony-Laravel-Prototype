@@ -33,7 +33,6 @@
                                 <p>{{ $message }}</p>
                             @enderror
                         </div>
-
                         <button type="submit" name="submit">Create</button>
                     </form>
                 </div>

@@ -24,7 +24,7 @@ class DiscController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'album_id' => ['required'],
+            'album_id' => ['required', 'exists:albums,id'],
             'name' => ['required'],
         ]);
         Disc::create($attributes);

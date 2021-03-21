@@ -32,7 +32,7 @@
 
                         <div>
                             <label for="price">Price:</label>
-                            <input type="text" name="price" id="price" value="{{ old('price') }}">
+                            <input type="number" name="price" id="price" min="0" step="any" value="{{ old('price') }}">
 
                             @error('price')
                                 <p>{{ $message }}</p>

@@ -24,7 +24,7 @@ class ItemListingController extends Controller
         $attributes = request()->validate([
             'name' => ['required'],
             'keywords' => ['required'],
-            'price' => ['required'],
+            'price' => ['required', 'numeric'],
         ]);
 
         ItemListing::create($attributes);

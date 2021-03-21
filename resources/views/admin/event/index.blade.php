@@ -15,7 +15,7 @@
                         <img src="/storage/{{ $event->image }}"> 
                     @endforeach
 
-                    <a href="/admin/event/create">Create</a>
+                    <a href="{{ route('admin.event.create') }}">Create</a>
                 </div>
             </div>
         </div>

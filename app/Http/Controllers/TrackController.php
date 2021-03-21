@@ -26,7 +26,7 @@ class TrackController extends Controller
         $attributes = request()->validate([
             'name' => ['required'],
             'length' => ['required'],
-            'disc_id' => ['required'],
+            'disc_id' => ['required', 'exists:discs,id'],
         ]);
         Track::create($attributes);
         
