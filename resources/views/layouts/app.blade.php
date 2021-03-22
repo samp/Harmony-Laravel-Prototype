@@ -31,6 +31,8 @@
         <main class="max-w-screen-lg m-auto mt-5 px-4 font-opensans">
             {{ $slot }}
         </main>
+
+        @include('layouts.footer')
     </div>
 </body>
 

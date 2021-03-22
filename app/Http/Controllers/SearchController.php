@@ -16,7 +16,20 @@ class SearchController extends Controller
 
     public function musicshow(AlbumListing $albumlisting)
     {
-        return $albumlisting;
+        $request = request()->input('format');
+        
+        if($request == null){
+            $releasetype = $albumlisting->albums->first()->format;
+        } else
+        {
+            $releasetype = $request;
+        }
+        $album = $albumlisting->albums->where('format', $releasetype)->first();
+
+        if($album == null) {
+            abort(404);
+        }
+        return view('music.show')->with('albumlisting', $albumlisting)->with('selectedalbum', $album);
     }
 
     public function merchindex()

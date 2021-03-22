@@ -17,6 +17,8 @@ class CreateTracksTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('length');
+            $table->decimal('price', 9, 2)->nullable();
+            $table->boolean('buyable')->nullable();
             $table->unsignedBigInteger('disc_id');
             $table->timestamps();
 
