@@ -23,7 +23,12 @@
                         <div class="py-2">
                         @foreach($albumlisting->albums as $album)
                             <div class="flex flex-row">
-                                <span class="text-gray-700">{{ $album->format }}</span><span class="ml-auto">£{{ $album->price }}</span>
+                                <span class="text-gray-700">{{ $album->format }}</span>
+                                @if($album->stock > 0)
+                                    <span class="ml-auto">£{{ $album->price }}</span>
+                                @else
+                                    <span class="ml-auto text-red-600">Out of stock</span>
+                                @endif
                             </div>
                         @endforeach
                         </div>

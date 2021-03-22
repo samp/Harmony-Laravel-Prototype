@@ -10,6 +10,7 @@ class Album extends Model
     protected $fillable = [
         'format',
         'price',
+        'stock',
         'album_listing_id'
     ];
 
