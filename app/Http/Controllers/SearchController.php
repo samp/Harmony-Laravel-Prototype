@@ -24,4 +24,9 @@ class SearchController extends Controller
         $itemlistings = ItemListing::all();
         return view('merch.index')->with('itemlistings', $itemlistings);
     }
+
+    public function merchshow(ItemListing $itemlisting)
+    {
+        return $itemlisting;
+    }
 }
