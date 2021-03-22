@@ -31,6 +31,24 @@
                         </div>
 
                         <div>
+                            <label for="price">Price:</label>
+                            <input type="number" name="price" id="price" min="0" step="any" value="{{ old('price') }}">
+
+                            @error('price')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label for="buyable">Buyable:</label>
+                            <input type="checkbox" id="buyable" name="buyable">
+
+                            @error('buyable')
+                                <p>{{ $message }}</p>
+                            @enderror  
+                        </div>
+
+                        <div>
                             <label for="disc_id">Disc:</label>
                             <select name="disc_id" id="disc_id">
                                 @foreach($discs as $disc)

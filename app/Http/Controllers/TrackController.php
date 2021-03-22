@@ -26,8 +26,16 @@ class TrackController extends Controller
         $attributes = request()->validate([
             'name' => ['required'],
             'length' => ['required'],
+            'price' => ['nullable', 'numeric'],
             'disc_id' => ['required', 'exists:discs,id'],
         ]);
+
+        if(request()->has('buyable')){
+            $attributes['buyable'] = true;
+        } else {
+            $attributes['buyable'] = false;
+        }
+
         Track::create($attributes);
         
         return redirect(route('admin.track'));

@@ -18,6 +18,8 @@ class CreateAlbumListingsTable extends Migration
             $table->text('name');
             $table->text('artist');
             $table->text('description');
+            $table->string('genre');
+            $table->timestamp('release_date');
             $table->string('cover_image');
             $table->timestamps();
         });
