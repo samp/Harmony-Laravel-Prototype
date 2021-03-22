@@ -9,6 +9,7 @@ class Album extends Model
 {
     protected $fillable = [
         'format',
+        'price',
         'album_listing_id'
     ];
 

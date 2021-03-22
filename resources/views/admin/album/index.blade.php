@@ -11,7 +11,7 @@
                 <div class="p-6">
                     <h1>Album Listings</h1>
                     @foreach($albums as $album)
-                        <p>{{ $album->albumListing->artist }} - {{ $album->albumListing->name }} ({{ $album->format}})</p>
+                        <p>{{ $album->albumListing->artist }} - {{ $album->albumListing->name }} ({{ $album->format}}) - {{ $album->price }}</p>
                     @endforeach
 
                     <a href="{{ route('admin.album.create') }}">Create</a>
