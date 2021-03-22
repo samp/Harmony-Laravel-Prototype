@@ -2,17 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,9 +11,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
-Route::get('/music', [App\Http\Controllers\SearchController::class, 'index'])->name('music');
+Route::get('/music', [App\Http\Controllers\SearchController::class, 'musicindex'])->name('music');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
-Route::get('/merch', [App\Http\Controllers\SearchController::class, 'index'])->name('merch');
+Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
 
@@ -41,7 +30,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('track', [App\Http\Controllers\TrackController::class, 'index'])->name('admin.track');
     Route::get('track/create', [App\Http\Controllers\TrackController::class, 'create'])->name('admin.track.create');
     Route::post('track/create', [App\Http\Controllers\TrackController::class, 'store']);
-    Route::get('event', [App\Http\Controllers\EventController::class, 'index'])->name('admin.event');
+    Route::get('event', [App\Http\Controllers\EventController::class, 'adminindex'])->name('admin.event');
     Route::get('event/create', [App\Http\Controllers\EventController::class, 'create'])->name('admin.event.create');
     Route::post('event/create', [App\Http\Controllers\EventController::class, 'store']);
     Route::get('itemlisting', [App\Http\Controllers\ItemListingController::class, 'index'])->name('admin.itemlisting');

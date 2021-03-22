@@ -11,6 +11,12 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
+        return View::make('events.index')->with('events', $events);
+    }
+
+    public function adminindex()
+    {
+        $events = Event::all();
         return View::make('admin.event.index')->with('events', $events);
     }
 

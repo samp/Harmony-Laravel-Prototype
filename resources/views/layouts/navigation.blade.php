@@ -26,12 +26,12 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex">
-                <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                <x-nav-link :href="route('index')">
                     {{ __('Cart') }}
                 </x-nav-link>
                 <div class="hidden sm:flex sm:ml-6">
                     @auth
-                        <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                        <x-nav-link :href="route('index')">
                             {{ __('Account') }}
                         </x-nav-link>
                     @endauth
