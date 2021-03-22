@@ -14,10 +14,9 @@ class SearchController extends Controller
         return view('music.index')->with('albumlistings', $albumlistings);
     }
 
-    public function musicshow()
+    public function musicshow(AlbumListing $albumlisting)
     {
-        $albumlistings = AlbumListing::all();
-        return view('music.index')->with('albumlistings', $albumlistings);
+        return $albumlisting;
     }
 
     public function merchindex()

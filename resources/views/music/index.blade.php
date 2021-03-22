@@ -23,7 +23,7 @@
                         <div class="py-2">
                         @foreach($albumlisting->albums as $album)
                             <div class="flex flex-row">
-                                <span class="text-gray-700">{{ $album->format }}</span><span class="ml-auto">£8.99</span>
+                                <span class="text-gray-700">{{ $album->format }}</span><span class="ml-auto">£{{ $album->price }}</span>
                             </div>
                         @endforeach
                         </div>

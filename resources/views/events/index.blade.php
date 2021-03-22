@@ -12,7 +12,7 @@
                 <img alt="{{ $event->description }}" src="/storage/{{ $event->image }}" class="w-full md:w-64">
                 <div class="p-4">
                     <h2 class="font-bold text-xl text-gray-800">{{ $event->artist }} - {{ $event->name }} </h2>
-                    <h3 class="text-sm text-gray-600 pb-4">{{ $event->location }} @ {{ $event->time }}</h3>
+                    <h3 class="text-sm text-gray-600 pb-4">{{ $event->time }} @ {{ $event->location }}</h3>
                     <p class="text-gray-700">{{ $event->description }}</p>
                 </div> 
             </div>

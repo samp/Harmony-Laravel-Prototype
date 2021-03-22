@@ -22,6 +22,15 @@
                         </div>
 
                         <div>
+                            <label for="price">Price:</label>
+                            <input type="number" name="price" id="price" min="0" step="any" value="{{ old('price') }}">
+
+                            @error('price')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
                             <label for="album_listing_id">Album Listing:</label>
                             <select name="album_listing_id" id="album_listing_id">
                                 @foreach($albumlistings as $albumlisting)

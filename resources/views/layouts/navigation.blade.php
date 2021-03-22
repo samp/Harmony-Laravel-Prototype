@@ -30,11 +30,15 @@
                     {{ __('Cart') }}
                 </x-nav-link>
                 <div class="hidden sm:flex sm:ml-6">
-                    @auth
+                    @can('adminAbility')
+                        <x-nav-link :href="route('admin')">
+                            {{ __('Admin') }}
+                        </x-nav-link>
+                    @else
                         <x-nav-link :href="route('index')">
                             {{ __('Account') }}
                         </x-nav-link>
-                    @endauth
+                    @endcan
                     @guest
                         <x-nav-link :href="route('login')">
                             {{ __('Log in') }}

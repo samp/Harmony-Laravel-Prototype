@@ -25,6 +25,7 @@ class AlbumController extends Controller
     {
         $attributes = request()->validate([
             'format' => ['required'],
+            'price' => ['required', 'numeric'],
             'album_listing_id' => ['required', 'exists:album_listings,id'],
         ]);
         Album::create($attributes);
