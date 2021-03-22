@@ -29,6 +29,24 @@
                         </ul> 
                     @endforeach
                 </ul>
+
+                <ul>
+                    @foreach($itemlistings as $itemlisting)
+                        <li>{{ $itemlisting->name }} ({{ $itemlisting->price }}) [{{ $itemlisting->keywords }}]</li>
+                        <ul>
+                        @foreach($itemlisting->items as $item)
+                            <li>{{ $item->size }}</li>
+                        @endforeach
+                        </ul>
+                    @endforeach
+                </ul>
+
+                <ul>
+                    @foreach($events as $event)
+                        <li>{{ $event->artist }} - {{ $event->name }} ({{ $event->time }} @ {{ $event->location }}) [{{ $event->description }}]</li>
+                    @endforeach
+                </ul>
+
                 </div>
             </div>
         </div>

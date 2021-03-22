@@ -10,6 +10,12 @@ class EventController extends Controller
 {
     public function index()
     {
+        $events = Event::where('time', '>=', date('Y-m-d'))->orderBy('time', 'ASC')->get();
+        return View::make('events.index')->with('events', $events);
+    }
+
+    public function adminindex()
+    {
         $events = Event::all();
         return View::make('admin.event.index')->with('events', $events);
     }

@@ -16,6 +16,7 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('format');
+            $table->decimal('price', 9, 2);
             $table->unsignedBigInteger('album_listing_id');
             $table->timestamps();
 
