@@ -8,10 +8,18 @@ module.exports = {
     ],
 
     theme: {
+        fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+            'opensans': ['Open Sans', 'sans-serif'],
+          },
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            lineHeight: {
+                '12': '3rem',
+                '14': '4rem',
+            }
         },
     },
 

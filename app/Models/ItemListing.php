@@ -12,4 +12,9 @@ class ItemListing extends Model
         'keywords',
         'price'
     ];
+
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 }

@@ -9,8 +9,13 @@ class Track extends Model
 {
     protected $fillable = [
         'name',
-        'formats',
         'length',
-        'disc'
+        'disc_id'
     ];
+
+
+    public function disc()
+    {
+        return $this->belongsTo(Disc::class);
+    }
 }
