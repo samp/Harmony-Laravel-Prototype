@@ -78,6 +78,10 @@
                 <p class="text-red-500">empty.</p>
                 @endforelse
             </div>
+
+            <div class="py-4">
+                {{ $albumlistings->links() }}
+            </div>
         </div>
     </div>
 </x-app-layout>

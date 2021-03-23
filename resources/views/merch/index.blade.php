@@ -17,7 +17,16 @@
                 </div>
                 </form>
             </div>
-            {{ $itemlistings }}
+            @forelse ($itemlistings as $itemlisting)
+                {{ $itemlisting }}
+            @empty
+            empty.
+            @endforelse
+
+            <div class="py-4">
+             {{ $itemlistings->links() }}
+            </div>
+
         </div>
     </div>
 </x-app-layout>
