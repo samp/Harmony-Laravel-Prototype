@@ -25,6 +25,8 @@ class AlbumListingController extends Controller
             'name' => ['required'],
             'artist' => ['required'],
             'description' => ['required'],
+            'genre' => ['required'],
+            'release_date' => ['required', 'date'],
             'cover_image' => ['required', 'image']
         ]);
 

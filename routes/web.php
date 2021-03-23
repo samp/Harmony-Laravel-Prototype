@@ -12,7 +12,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
 Route::get('/music', [App\Http\Controllers\SearchController::class, 'musicindex'])->name('music');
-Route::get('/music/{albumlisting}', [App\Http\Controllers\SearchController::class, 'musicshow']);
+Route::get('/music/{albumlisting}', [App\Http\Controllers\SearchController::class, 'musicshow'])->name('musicshow');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
 Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
 Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow']);

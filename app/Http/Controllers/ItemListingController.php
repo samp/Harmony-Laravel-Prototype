@@ -25,7 +25,10 @@ class ItemListingController extends Controller
             'name' => ['required'],
             'keywords' => ['required'],
             'price' => ['required', 'numeric'],
+            'product_image' => ['required', 'image']
         ]);
+
+        $attributes['product_image'] = request('product_image')->store('productimages');
 
         ItemListing::create($attributes);
         

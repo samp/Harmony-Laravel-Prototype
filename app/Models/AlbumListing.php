@@ -12,6 +12,8 @@ class AlbumListing extends Model
         'artist',
         'description',
         'price',
+        'genre',
+        'release_date',
         'cover_image'
     ];
 

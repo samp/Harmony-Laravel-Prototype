@@ -10,6 +10,8 @@ class Track extends Model
     protected $fillable = [
         'name',
         'length',
+        'price',
+        'buyable',
         'disc_id'
     ];
 

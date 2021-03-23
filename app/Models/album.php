@@ -10,7 +10,12 @@ class Album extends Model
     protected $fillable = [
         'format',
         'price',
+        'stock',
         'album_listing_id'
+    ];
+
+    protected $casts = [
+        'price' => 'float'
     ];
 
     public function albumListing()

@@ -12,13 +12,13 @@
 
             <!-- Navigation Links -->
             <div class="hidden sm:-my-px sm:flex sm:max-w-screen-md sm:justify-around w-1/2">
-                <x-nav-link :href="route('music')" :active="request()->routeIs('music')">
+                <x-nav-link :href="route('music')" :active="request()->routeIs('music*')">
                     {{ __('Music') }}
                 </x-nav-link>
                 <x-nav-link :href="route('events')" :active="request()->routeIs('events')">
                     {{ __('Events') }}
                 </x-nav-link>
-                <x-nav-link :href="route('merch')" :active="request()->routeIs('merch')">
+                <x-nav-link :href="route('merch')" :active="request()->routeIs('merch*')">
                     {{ __('Merch') }}
                 </x-nav-link>
             </div>
@@ -78,13 +78,13 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('music')" :active="request()->routeIs('music')">
+            <x-responsive-nav-link :href="route('music')" :active="request()->routeIs('music*')">
                 {{ __('Music') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('events')" :active="request()->routeIs('events')">
                 {{ __('Events') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('merch')" :active="request()->routeIs('merch')">
+            <x-responsive-nav-link :href="route('merch')" :active="request()->routeIs('merch*')">
                 {{ __('Merch') }}
             </x-responsive-nav-link>
         </div>

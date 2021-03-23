@@ -40,6 +40,24 @@
                         </div>
 
                         <div>
+                            <label for="genre">Genre:</label>
+                            <input type="text" name="genre" id="genre" value="{{ old('genre') }}">
+
+                            @error('genre')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label for="release_date">Release Date:</label>
+                            <input type="date" name="release_date" id="release_date" value="{{ old('release_date') }}">
+
+                            @error('release_date')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
                             <label for="cover_image">Cover Image:</label>
                             <input type="file" name="cover_image" id="cover_image">
 

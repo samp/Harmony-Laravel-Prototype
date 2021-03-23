@@ -29,6 +29,15 @@
                                 <p>{{ $message }}</p>
                             @enderror
                         </div>
+                        
+                        <div>
+                            <label for="stock">Stock:</label>
+                            <input type="number" name="stock" id="stock" min="0" step="any" value="{{ old('stock') }}">
+
+                            @error('stock')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
 
                         <div>
                             <label for="album_listing_id">Album Listing:</label>
