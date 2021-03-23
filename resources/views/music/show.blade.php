@@ -60,14 +60,14 @@
                     @forelse($merch as $merchitem)
                         <div class="flex flex-row pb-4">
                             <picture class="w-40  pr-4">
-                                <source srcset="images/melodrama-shirt.jpg">
-                                <img class="w-full h-auto object-cover" src="images/melodrama-shirt.jpg" alt="Album">
+                                <source srcset="{{ '../storage/' . $merchitem->product_image }}">
+                                <img class="w-full h-auto object-cover" src="{{ '../storage/' . $merchitem->product_image }}" alt="Album">
                             </picture>
                             <div class="my-3 ml-3 flex flex-col">
                                 <h3 class="text-lg font-medium font-poppins">{{ $merchitem->name }}</h3>
                                 <p class="">£{{ $merchitem->price }}</p>
                                 <div
-                                    class="mt-auto rounded-md border-2 w-36 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
+                                    class="mt-auto rounded-md border-2 w-20 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
                                     <a href="/merch/{{ $merchitem->id }}" class="block pt-3 pb-4 pl-5 pr-5">
                                         <p class="text-center">View</p>
                                     </a>
