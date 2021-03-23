@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="mt-5">
+    <div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col-reverse sm:grid sm:grid-cols-3 md:grid-cols-4 mt-4 gap-4">
                 <div class="col-span-2 flex flex-row gap-2">
@@ -57,7 +57,7 @@
                             <div class="flex flex-row">
                                 <span class="text-gray-700">{{ $album->format }}</span>
                                 @if($album->stock > 0)
-                                <span class="ml-auto">£{{ $album->price }}</span>
+                                <span class="ml-auto">{{ formatmoney($album->price) }}</span>
                                 @else
                                 <span class="ml-auto text-red-600">Out of stock</span>
                                 @endif

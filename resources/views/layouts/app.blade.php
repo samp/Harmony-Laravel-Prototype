@@ -23,12 +23,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+<body class="font-sans antialiased w-100">
+    <div class="flex flex-col min-h-screen bg-gray-100">
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="max-w-screen-lg m-auto mt-5 px-4 font-opensans">
+        <main class="flex-grow max-w-screen-lg m-auto mt-5 px-4 lg:px-0 font-opensans">
             {{ $slot }}
         </main>
 

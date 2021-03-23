@@ -25,7 +25,7 @@
 
                         <div class="mt-2 md:mt-auto font-opensans">
                             <p>Genre: {{ $albumlisting->genre }}</p>
-                            <p>Released: {{ $albumlisting->release_date }}</p>
+                            <p>Released: {{ \Carbon\Carbon::parse($albumlisting->release_date)->format('jS F Y') }}</p>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@
                                 class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
                                 <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
                                     <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
-                                        £{{ $album->price }}
+                                        {{ formatmoney($album->price) }}
                                     </h1>
                                     <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
                                 </a>
@@ -58,14 +58,14 @@
                     </div>
                     <div class="w-full p-4 bg-white rounded-xl shadow mb-4 divide-y-2 divide-gray-200 divide-solid">
                     @forelse($merch as $merchitem)
-                        <div class="flex flex-row pb-4">
-                            <picture class="w-40  pr-4">
+                        <div class="flex flex-row @if(!$loop->last) mb-4 @endif">
+                            <picture class="w-40 p-4">
                                 <source srcset="{{ '../storage/' . $merchitem->product_image }}">
                                 <img class="w-full h-auto object-cover" src="{{ '../storage/' . $merchitem->product_image }}" alt="Album">
                             </picture>
                             <div class="my-3 ml-3 flex flex-col">
                                 <h3 class="text-lg font-medium font-poppins">{{ $merchitem->name }}</h3>
-                                <p class="">£{{ $merchitem->price }}</p>
+                                <p class="">{{ formatmoney($merchitem->price) }}</p>
                                 <div
                                     class="mt-auto rounded-md border-2 w-20 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
                                     <a href="/merch/{{ $merchitem->id }}" class="block pt-3 pb-4 pl-5 pr-5">
@@ -94,7 +94,7 @@
                                 <p>{{ $track->length }}</p>
                                 <p>
                                     @if($track->price)
-                                        {{ $track->price }}
+                                        {{ formatmoney($track->price) }}
                                     @else
                                     -
                                     @endif

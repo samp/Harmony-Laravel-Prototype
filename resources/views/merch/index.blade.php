@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="mt-5">
+    <div class="">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col-reverse sm:grid sm:grid-cols-3 md:grid-cols-4 mt-4 gap-4">
                 <div class="col-start-4 relative sm:ml-auto text-gray-600">
