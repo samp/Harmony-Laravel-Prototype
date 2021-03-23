@@ -39,6 +39,15 @@
                             @enderror
                         </div>
 
+                        <div>
+                            <label for="product_image">Product Image:</label>
+                            <input type="file" name="product_image" id="product_image">
+
+                            @error('product_image')
+                                <p>{{ $message }}</p>
+                            @enderror
+                        </div>
+
                         <button type="submit" name="submit">Create</button>
                     </form>
                 </div>

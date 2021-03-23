@@ -10,7 +10,8 @@ class ItemListing extends Model
     protected $fillable = [
         'name',
         'keywords',
-        'price'
+        'price',
+        'product_image'
     ];
 
     public function items()

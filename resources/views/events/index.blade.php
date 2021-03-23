@@ -17,6 +17,10 @@
                 </div> 
             </div>
         @endforeach
+
+        <div class="py-4">
+             {{ $events->links() }}
+            </div>
         </div>
     </div>
 </x-app-layout>

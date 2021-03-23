@@ -10,7 +10,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::where('time', '>=', date('Y-m-d'))->orderBy('time', 'ASC')->get();
+        $events = Event::where('time', '>=', date('Y-m-d'))->orderBy('time', 'ASC')->paginate(4);
         return View::make('events.index')->with('events', $events);
     }
 
