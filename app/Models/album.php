@@ -14,6 +14,10 @@ class Album extends Model
         'album_listing_id'
     ];
 
+    protected $casts = [
+        'price' => 'float'
+    ];
+
     public function albumListing()
     {
         return $this->belongsTo(AlbumListing::class);
