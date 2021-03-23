@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use App\Models\AlbumListing;
 use App\Models\ItemListing;
 
@@ -10,8 +11,22 @@ class SearchController extends Controller
 {
     public function musicindex()
     {
-        $albumlistings = AlbumListing::all();
-        return view('music.index')->with('albumlistings', $albumlistings);
+        $selectedgenre = request()->input('genre');
+        $search = request()->input('search');
+        $genres = AlbumListing::all()->pluck('genre')->unique();
+        if($selectedgenre == null)
+        {
+            if($search == null)
+            {
+                $albumlistings = AlbumListing::all();
+            } else {
+                $albumlistings = AlbumListing::where('name', 'like', '%' . $search . '%')->orWhere('artist', 'like', '%' . $search . '%')->get();
+            }
+        } else {
+            $albumlistings = AlbumListing::where('genre', $selectedgenre)->get();
+        }
+
+        return view('music.index')->with('albumlistings', $albumlistings)->with('genres', $genres)->with('selectedgenre', $selectedgenre);
     }
 
     public function musicshow(AlbumListing $albumlisting)
