@@ -57,23 +57,27 @@
                         </p>
                     </div>
                     <div class="w-full p-4 bg-white rounded-xl shadow mb-4 divide-y-2 divide-gray-200 divide-solid">
-                        <p class="text-red-500">NOT DYNAMIC YET</p>
+                    @forelse($merch as $merchitem)
                         <div class="flex flex-row pb-4">
                             <picture class="w-40  pr-4">
                                 <source srcset="images/melodrama-shirt.jpg">
                                 <img class="w-full h-auto object-cover" src="images/melodrama-shirt.jpg" alt="Album">
                             </picture>
                             <div class="my-3 ml-3 flex flex-col">
-                                <h3 class="text-lg font-medium font-poppins">Melodrama T shirt</h3>
-                                <p class="">£15.99</p>
+                                <h3 class="text-lg font-medium font-poppins">{{ $merchitem->name }}</h3>
+                                <p class="">£{{ $merchitem->price }}</p>
                                 <div
                                     class="mt-auto rounded-md border-2 w-36 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
-                                    <a href="#" class="block pt-3 pb-4 pl-5 pr-5">
-                                        <p class="text-center">Add to cart</p>
+                                    <a href="/merch/{{ $merchitem->id }}" class="block pt-3 pb-4 pl-5 pr-5">
+                                        <p class="text-center">View</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    
+                    @empty
+                        There is no related merch for this album.
+                    @endforelse
                     </div>
                 </div>
                 <div class="flex flex-col">

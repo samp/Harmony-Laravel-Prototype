@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use App\Models\AlbumListing;
 use App\Models\ItemListing;
 
@@ -32,6 +31,7 @@ class SearchController extends Controller
     public function musicshow(AlbumListing $albumlisting)
     {
         $request = request()->input('format');
+        $merch = ItemListing::where('name', 'like', '%' . $albumlisting->name . '%')->orWhere('keywords', 'like', '%' . $albumlisting->name . '%')->get();
         
         if($request == null){
             $releasetype = $albumlisting->albums->first()->format;
@@ -44,12 +44,18 @@ class SearchController extends Controller
         if($album == null) {
             abort(404);
         }
-        return view('music.show')->with('albumlisting', $albumlisting)->with('selectedalbum', $album);
+        return view('music.show')->with('albumlisting', $albumlisting)->with('selectedalbum', $album)->with('merch', $merch);
     }
 
     public function merchindex()
     {
-        $itemlistings = ItemListing::all();
+        $search = request()->input('search');
+        if($search == null)
+            {
+                $itemlistings = ItemListing::all();
+            } else {
+                $itemlistings = ItemListing::where('name', 'like', '%' . $search . '%')->orWhere('keywords', 'like', '%' . $search . '%')->get();
+            }
         return view('merch.index')->with('itemlistings', $itemlistings);
     }
 
