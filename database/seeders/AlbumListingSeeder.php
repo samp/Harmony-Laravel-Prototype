@@ -27,7 +27,15 @@ class AlbumListingSeeder extends Seeder
             'name' => "After Hours",
             'artist' => "The Weeknd",
             'description' => "Fourth studio album by the Canadian singer. The album was produced primarily by The Weeknd, along with a variety of high-profile producers such as DaHeala, Illangelo, Max Martin and Metro Boomin. Music journalists have noted the album as an artistic reinvention for The Weeknd, with the introduction of new wave and dream pop influences, while thematically, 'After Hours' explores promiscuity, overindulgence, and self-loathing.",
-            'genre' => "R&B",
+            'genre' => "RnB",
+            'cover_image' => "null",
+        ]);
+        DB::table('album_listings')->insert([
+            'id' => 3,
+            'name' => "The Dark Side of The Moon",
+            'artist' => "Pink Floyd",
+            'description' => "Eighth studio album by the legendary English progressive rock band. Remastered and re-released as part of the 'Why Pink Floyd...?' campaign, the album is widely regarded as one of the greatest of all time and includes the tracks 'The Great Gig in the Sky', 'Money', 'Time', 'Any Colour You Like' and 'Us and Them'.",
+            'genre' => "Rock",
             'cover_image' => "null",
         ]);
     }

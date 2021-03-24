@@ -45,5 +45,15 @@ class DiscSeeder extends Seeder
             'album_id' => 5,
             'name' => "Disc 2",
         ]);
+        DB::table('discs')->insert([
+            'id' => 7,
+            'album_id' => 6,
+            'name' => "Side 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 8,
+            'album_id' => 6,
+            'name' => "Side 2",
+        ]);
     }
 }
