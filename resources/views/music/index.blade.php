@@ -13,19 +13,19 @@
                         <i class="fas fa-filter" aria-hidden="true"></i>
                     </div>
                     @foreach($genres as $genre)
-                    @if($genre == $selectedgenre)
-                    <div
-                        class="rounded-md border-2 hover:border-purple-400 hover:bg-white bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white border-transparent transition-colors">
-                        <a href="?genre=" class="flex flex-row align-middle p-2"><span
-                                class="m-auto">{{ $genre }}</span></a>
-                    </div>
-                    @else
-                    <div
-                        class="bg-white rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                        <a href="?genre={{ $genre }}" class="flex flex-row align-middle p-2"><span
-                                class="m-auto">{{ $genre }}</span></a>
-                    </div>
-                    @endif
+                        @if($genre == $selectedgenre)
+                        <div
+                            class="rounded-md border-2 hover:border-purple-400 hover:bg-white bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white border-transparent transition-colors">
+                            <a href="?genre=" class="flex flex-row align-middle p-2"><span
+                                    class="m-auto">{{ $genre }}</span></a>
+                        </div>
+                        @else
+                        <div
+                            class="bg-white rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
+                            <a href="?genre={{ $genre }}" class="flex flex-row align-middle p-2"><span
+                                    class="m-auto">{{ $genre }}</span></a>
+                        </div>
+                        @endif
                     @endforeach
 
                 </div>
@@ -56,10 +56,10 @@
                             @foreach($albumlisting->albums as $album)
                             <div class="flex flex-row">
                                 <span class="text-gray-700">{{ $album->format }}</span>
-                                @if($album->stock > 0)
-                                <span class="ml-auto">{{ formatmoney($album->price) }}</span>
+                                @if(is_null($album->stock) or $album->stock > 0)
+                                    <span class="ml-auto">{{ formatmoney($album->price) }}</span>
                                 @else
-                                <span class="ml-auto text-red-600">Out of stock</span>
+                                    <span class="ml-auto text-red-600">Out of stock</span>
                                 @endif
                             </div>
                             @endforeach

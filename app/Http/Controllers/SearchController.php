@@ -34,7 +34,7 @@ class SearchController extends Controller
         $merch = ItemListing::where('name', 'like', '%' . $albumlisting->name . '%')->orWhere('keywords', 'like', '%' . $albumlisting->name . '%')->get();
         
         if($request == null){
-            $releasetype = $albumlisting->albums->first()->format;
+            $releasetype = $albumlisting->albums->where('stock', '!=', "0")->first()->format;
         } else
         {
             $releasetype = $request;
