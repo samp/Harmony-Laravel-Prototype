@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             'email' => "admin@harmony.com",
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'user_role' => "admin",
             'remember_token' => Str::random(10),
         ]);
         \App\Models\User::factory(10)->create();

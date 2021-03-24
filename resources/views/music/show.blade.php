@@ -32,7 +32,7 @@
                     <div class="md:ml-auto mx-6 my-6 mt-auto md:mt-6 flex flex-row md:flex-col">
                         @foreach($albumlisting->albums as $album)
 
-                            @if($album->stock > 0)
+                            @if(is_null($album->stock) or $album->stock > 0)
                             <div
                                 class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
                                 <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
