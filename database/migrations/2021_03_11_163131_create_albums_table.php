@@ -17,7 +17,7 @@ class CreateAlbumsTable extends Migration
             $table->bigIncrements('id');
             $table->string('format');
             $table->decimal('price', 9, 2);
-            $table->integer('stock');
+            $table->integer('stock')->nullable();
             $table->unsignedBigInteger('album_listing_id');
             $table->timestamps();
 
