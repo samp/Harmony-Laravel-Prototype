@@ -18,7 +18,7 @@ class EventSeeder extends Seeder
             'id' => 1,
             'name' => "Event 1",
             'artist' => "Artist 1",
-            'time' => \Carbon\Carbon::parse('2020-08-20'),
+            'time' => \Carbon\Carbon::parse('2021-08-20'),
             'location' => "Location 1",
             'description' => "Description 1",
             'image' => "static/melodrama.jpg",
