@@ -17,8 +17,10 @@ class ItemListingSeeder extends Seeder
         DB::table('item_listings')->insert([
             'id' => 1,
             'name' => "Item 1",
-            'keywords' => "",
+            'keywords' => "Melodrama",
             'price' =>  10.00,
+            'description' => "tester",
+            'type' => 't-shirt',
             'product_image' => "static/melodrama.jpg",
         ]);
         DB::table('item_listings')->insert([
@@ -26,6 +28,8 @@ class ItemListingSeeder extends Seeder
             'name' => "Item 2",
             'keywords' => "",
             'price' =>  11.00,
+            'description' => "tester",
+            'type' => 't-shirt',
             'product_image' => "static/melodrama.jpg",
         ]);
         DB::table('item_listings')->insert([
@@ -33,6 +37,8 @@ class ItemListingSeeder extends Seeder
             'name' => "Item 3",
             'keywords' => "",
             'price' =>  12.00,
+            'description' => "tester",
+            'type' => 't-shirt',
             'product_image' => "static/melodrama.jpg",
         ]);
         DB::table('item_listings')->insert([
@@ -40,6 +46,8 @@ class ItemListingSeeder extends Seeder
             'name' => "Item 4",
             'keywords' => "",
             'price' =>  13.35,
+            'description' => "tester",
+            'type' => 't-shirt',
             'product_image' => "static/melodrama.jpg",
         ]);
         DB::table('item_listings')->insert([
@@ -47,6 +55,8 @@ class ItemListingSeeder extends Seeder
             'name' => "Item 5",
             'keywords' => "",
             'price' =>  8.50,
+            'description' => "tester",
+            'type' => 't-shirt',
             'product_image' => "static/melodrama.jpg",
         ]);
     }

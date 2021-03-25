@@ -18,7 +18,8 @@ class CreateItemListingsTable extends Migration
             $table->string('name');
             $table->string('keywords');
             $table->decimal('price', 9, 2);
-            // ??
+            $table->string('type');
+            $table->string('description');
             $table->string('product_image');
             $table->timestamps();
             

@@ -18,7 +18,10 @@
                 </form>
             </div>
             @forelse ($itemlistings as $itemlisting)
-                {{ $itemlisting }}
+                <p>{{ $itemlisting->name }} {{ $itemlisting->price }}</p>
+                @foreach($itemlisting->items as $item)
+                    <p>{{ $item->size }} {{ $item->stock }}</p>
+                @endforeach
             @empty
             empty.
             @endforelse
