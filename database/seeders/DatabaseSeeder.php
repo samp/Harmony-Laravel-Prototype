@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
             AlbumSeeder::class,
             DiscSeeder::class,
             TrackSeeder::class,
+            EventSeeder::class,
+            ItemListingSeeder::class,
+            ItemSeeder::class,
         ]);
     }
 }
