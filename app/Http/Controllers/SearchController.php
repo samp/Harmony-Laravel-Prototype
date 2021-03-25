@@ -61,6 +61,6 @@ class SearchController extends Controller
 
     public function merchshow(ItemListing $itemlisting)
     {
-        return $itemlisting;
+        return view('merch.show')->with('itemlisting', $itemlisting);
     }
 }
