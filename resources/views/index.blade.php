@@ -63,7 +63,7 @@
                             <p>{{ "size stock info here maybe??" }}</p>
                             <div
                                 class="text-right mt-auto ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                                <a href="{{ route('merch') . '/' . $item->id }}"
+                                <a href="{{ route('music') . '/' . $item->id }}"
                                     class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Buy
                                     </span><i class="fas fa-arrow-right text-xl leading-7" aria-hidden="true"></i></a>
                             </div>
