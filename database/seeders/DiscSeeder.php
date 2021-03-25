@@ -80,5 +80,65 @@ class DiscSeeder extends Seeder
             'album_id' => 10,
             'name' => "MP3",
         ]);
+        DB::table('discs')->insert([
+            'id' => 14,
+            'album_id' => 11,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 15,
+            'album_id' => 12,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 16,
+            'album_id' => 13,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 17,
+            'album_id' => 14,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 18,
+            'album_id' => 15,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 19,
+            'album_id' => 16,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 20,
+            'album_id' => 17,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 21,
+            'album_id' => 18,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 22,
+            'album_id' => 19,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 23,
+            'album_id' => 20,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 24,
+            'album_id' => 21,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 25,
+            'album_id' => 22,
+            'name' => "Disc 1",
+        ]);
     }
 }
