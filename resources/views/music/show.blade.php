@@ -34,7 +34,7 @@
 
                             @if(is_null($album->stock) or $album->stock > 0)
                             <div
-                                class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
+                            class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
                                 <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
                                     <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
                                         {{ formatmoney($album->price) }}
