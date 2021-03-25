@@ -84,5 +84,89 @@ class AlbumSeeder extends Seeder
             'stock' => null,
             'album_listing_id' => 6
         ]);
+        DB::table('albums')->insert([
+            'id' => 11,
+            'format' => "CD",
+            'price' => 11.99,
+            'stock' => null,
+            'album_listing_id' => 5
+        ]);
+        DB::table('albums')->insert([
+            'id' => 12,
+            'format' => "Digital",
+            'price' => 11.99,
+            'stock' => null,
+            'album_listing_id' => 7
+        ]);
+        DB::table('albums')->insert([
+            'id' => 13,
+            'format' => "CD",
+            'price' => 18.99,
+            'stock' => null,
+            'album_listing_id' => 7
+        ]);
+        DB::table('albums')->insert([
+            'id' => 14,
+            'format' => "Digital",
+            'price' => 11.99,
+            'stock' => null,
+            'album_listing_id' => 8
+        ]);
+        DB::table('albums')->insert([
+            'id' => 15,
+            'format' => "CD",
+            'price' => 18.99,
+            'stock' => null,
+            'album_listing_id' => 8
+        ]);
+        DB::table('albums')->insert([
+            'id' => 16,
+            'format' => "Digital",
+            'price' => 11.99,
+            'stock' => null,
+            'album_listing_id' => 9
+        ]);
+        DB::table('albums')->insert([
+            'id' => 17,
+            'format' => "CD",
+            'price' => 18.99,
+            'stock' => null,
+            'album_listing_id' => 9
+        ]);
+        DB::table('albums')->insert([
+            'id' => 18,
+            'format' => "Digital",
+            'price' => 11.99,
+            'stock' => null,
+            'album_listing_id' => 10
+        ]);
+        DB::table('albums')->insert([
+            'id' => 19,
+            'format' => "CD",
+            'price' => 18.99,
+            'stock' => null,
+            'album_listing_id' => 10
+        ]);
+        DB::table('albums')->insert([
+            'id' => 20,
+            'format' => "Digital",
+            'price' => 9.99,
+            'stock' => null,
+            'album_listing_id' => 11
+        ]);
+        DB::table('albums')->insert([
+            'id' => 21,
+            'format' => "Digital",
+            'price' => 9.99,
+            'stock' => null,
+            'album_listing_id' => 12
+        ]);
+        DB::table('albums')->insert([
+            'id' => 22,
+            'format' => "CD",
+            'price' => 14.99,
+            'stock' => 40,
+            'album_listing_id' => 12
+        ]);
     }
 }
