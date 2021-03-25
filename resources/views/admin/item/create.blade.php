@@ -1,30 +1,26 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
     <div class="mt-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
                 <div class="p-6">
-                    <h1>Create Item</h1>
-                    <form method="post">
+                    <h1 class="text-3xl font-poppins mb-2">Create Item</h1>
+                    <form method="post" class="flex flex-col gap-4">
                         @csrf
-                        <div>
+                        <div class="grid grid-cols-2 items-center">
                             <label for="size">Size:</label>
-                            <input type="text" name="size" id="size" value="{{ old('size') }}">
+                            <input type="text" name="size" id="size" value="{{ old('size') }}"
+                                class="rounded-lg shadow border-gray-300">
 
                             @error('size')
                                 <p>{{ $message }}</p>
                             @enderror
                         </div>
 
-                        <div>
-                            <label for="item_listing_id">Album Listing:</label>
-                            <select name="item_listing_id" id="item_listing_id">
-                                @foreach($itemlistings as $itemlisting)
+                        <div class="grid grid-cols-2 items-center">
+                            <label for="item_listing_id">Item Listing:</label>
+                            <select name="item_listing_id" id="item_listing_id"
+                                class="rounded-lg shadow border-gray-300">
+                                @foreach ($itemlistings as $itemlisting)
                                     <option value="{{ $itemlisting->id }}">{{ $itemlisting->name }}</option>
                                 @endforeach
                             </select>
@@ -33,7 +29,9 @@
                                 <p>{{ $message }}</p>
                             @enderror
                         </div>
-                        <button type="submit" name="submit">Create</button>
+                        <button type="submit" name="submit"
+                            class="ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors flex align-middle p-2 font-poppins"><span
+                                class="mx-2 text-xl">Create</span></button>
                     </form>
                 </div>
             </div>
