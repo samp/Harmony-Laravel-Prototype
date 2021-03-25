@@ -23,14 +23,14 @@ class AlbumSeeder extends Seeder
         ]);
         DB::table('albums')->insert([
             'id' => 2,
-            'format' => "MP3",
+            'format' => "Digital",
             'price' => 5.99,
             'stock' => null,
             'album_listing_id' => 1
         ]);
         DB::table('albums')->insert([
             'id' => 3,
-            'format' => "MP3",
+            'format' => "Digital",
             'price' => 5.99,
             'stock' => null,
             'album_listing_id' => 2
@@ -55,6 +55,34 @@ class AlbumSeeder extends Seeder
             'price' => 14.99,
             'stock' => 20,
             'album_listing_id' => 3
+        ]);
+        DB::table('albums')->insert([
+            'id' => 7,
+            'format' => "Vinyl",
+            'price' => 13.99,
+            'stock' => 20,
+            'album_listing_id' => 4
+        ]);
+        DB::table('albums')->insert([
+            'id' => 8,
+            'format' => "Digital",
+            'price' => 7.99,
+            'stock' => null,
+            'album_listing_id' => 4
+        ]);
+        DB::table('albums')->insert([
+            'id' => 9,
+            'format' => "Digital",
+            'price' => 9.99,
+            'stock' => null,
+            'album_listing_id' => 5
+        ]);
+        DB::table('albums')->insert([
+            'id' => 10,
+            'format' => "Digital",
+            'price' => 9.99,
+            'stock' => null,
+            'album_listing_id' => 6
         ]);
     }
 }

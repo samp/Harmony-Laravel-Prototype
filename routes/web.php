@@ -15,7 +15,7 @@ Route::get('/music', [App\Http\Controllers\SearchController::class, 'musicindex'
 Route::get('/music/{albumlisting}', [App\Http\Controllers\SearchController::class, 'musicshow'])->name('musicshow');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
 Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
-Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow']);
+Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow'])->name('merchshow');
 
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
