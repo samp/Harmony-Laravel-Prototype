@@ -11,6 +11,7 @@ class ItemListing extends Model
         'name',
         'keywords',
         'price',
+        'type',
         'product_image'
     ];
 

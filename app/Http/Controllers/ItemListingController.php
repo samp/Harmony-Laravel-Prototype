@@ -25,6 +25,8 @@ class ItemListingController extends Controller
             'name' => ['required'],
             'keywords' => ['required'],
             'price' => ['required', 'numeric'],
+            'type' => ['required'],
+            'description' => ['required'],
             'product_image' => ['required', 'image']
         ]);
 

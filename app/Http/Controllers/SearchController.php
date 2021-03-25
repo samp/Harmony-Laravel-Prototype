@@ -49,18 +49,26 @@ class SearchController extends Controller
 
     public function merchindex()
     {
+        $types = ItemListing::all()->pluck('type')->unique()->take(5);
+        $selectedtype = request()->input('type');
         $search = request()->input('search');
-        if($search == null)
+
+        if($selectedtype == null) {
+            if($search == null)
             {
                 $itemlistings = ItemListing::paginate(16);
             } else {
                 $itemlistings = ItemListing::where('name', 'like', '%' . $search . '%')->orWhere('keywords', 'like', '%' . $search . '%')->paginate(16)->appends(request()->query());
             }
-        return view('merch.index')->with('itemlistings', $itemlistings);
+        } else {
+            $itemlistings = ItemListing::where('type', $selectedtype)->paginate(16)->appends(request()->query());
+        }
+        
+        return view('merch.index')->with('itemlistings', $itemlistings)->with('selectedtype', $selectedtype)->with('types', $types);
     }
 
     public function merchshow(ItemListing $itemlisting)
     {
-        return $itemlisting;
+        return view('merch.show')->with('itemlisting', $itemlisting);
     }
 }

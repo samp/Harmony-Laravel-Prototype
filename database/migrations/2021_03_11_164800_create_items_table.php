@@ -16,6 +16,7 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('size');
+            $table->integer('stock')->nullable();
             $table->unsignedBigInteger('item_listing_id');
             $table->timestamps();
 

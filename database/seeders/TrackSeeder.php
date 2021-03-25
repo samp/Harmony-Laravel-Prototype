@@ -441,5 +441,217 @@ class TrackSeeder extends Seeder
             'length' => "2:03",
             'disc_id' => 8,
         ]);
+
+        
+
+
+        DB::table('tracks')->insert([
+            'name' => "I Don't Want to Know",
+            'length' => "3:15",
+            'disc_id' => 9,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Dreams",
+            'length' => "4:14",
+            'disc_id' => 9,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Never Going Back Again",
+            'length' => "2:14",
+            'disc_id' => 9,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Don't Stop",
+            'length' => "3:13",
+            'disc_id' => 9,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Go Your Own Way",
+            'length' => "3:43",
+            'disc_id' => 9,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Songbird",
+            'length' => "3:20",
+            'disc_id' => 10,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Chain",
+            'length' => "4:30",
+            'disc_id' => 10,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "You Make Loving Fun",
+            'length' => "3:31",
+            'disc_id' => 10,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Second Hand News",
+            'length' => "2:56",
+            'disc_id' => 10,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Oh Daddy",
+            'length' => "3:56",
+            'disc_id' => 10,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Gold Dust Woman",
+            'length' => "4:56",
+            'disc_id' => 10,
+        ]);
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "I Don't Want to Know",
+            'length' => "3:15",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Dreams",
+            'length' => "4:14",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Never Going Back Again",
+            'length' => "2:14",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Don't Stop",
+            'length' => "3:13",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Go Your Own Way",
+            'length' => "3:43",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Songbird",
+            'length' => "3:20",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Chain",
+            'length' => "4:30",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "You Make Loving Fun",
+            'length' => "3:31",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Second Hand News",
+            'length' => "2:56",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Oh Daddy",
+            'length' => "3:56",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Gold Dust Woman",
+            'length' => "4:56",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 11,
+        ]);
+
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "The Unveiling",
+            'length' => "5:47",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Interdimensional Summit",
+            'length' => "4:39",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Ætheric",
+            'length' => "5:27",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Council of Wolves and Snakes",
+            'length' => "5:19",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Empyrean Phoenix",
+            'length' => "4:44",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Lightbringer",
+            'length' => "6:06",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "I Am Sovereign",
+            'length' => "6:48",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Archaic Correspondance",
+            'length' => "4:55",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Alpha Aeon Omega",
+            'length' => "5:18",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 12,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Rite of Passage (Instrumental)",
+            'length' => "5:16",
+            'disc_id' => 12,
+        ]);
+
     }
 }
