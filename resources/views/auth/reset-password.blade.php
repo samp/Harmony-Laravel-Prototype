@@ -1,9 +1,11 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{{ route('index') }}">
+                    <img class="block w-auto h-20" src="{{ asset('images/logo.png') }}">
+                </a>
+            </div>
         </x-slot>
 
         <!-- Validation Errors -->

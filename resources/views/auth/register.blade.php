@@ -4,9 +4,11 @@
     </x-slot>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{{ route('index') }}">
+                    <img class="block w-auto h-20" src="{{ asset('images/logo.png') }}">
+                </a>
+            </div>
         </x-slot>
 
         <!-- Validation Errors -->
@@ -49,7 +51,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
