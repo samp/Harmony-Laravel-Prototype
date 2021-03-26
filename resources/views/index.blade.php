@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="title">
+        Home
+    </x-slot>
+
     <div
         class="w-full h-96 mb-6 bg-gray-500 text-white text-4xl text-center flex justify-center items-center rounded-xl shadow overflow-hidden">
         <h1 class="block">CAROUSEL HERE</h1>

@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        Music
+    </x-slot>
     <div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col-reverse sm:grid sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -70,7 +73,7 @@
                     </div>
 
                 @empty
-                    <p class="text-red-500">empty.</p>
+                    <p class="mt-4">There are no products to display.</p>
                 @endforelse
             </div>
 
