@@ -10,6 +10,7 @@
                     <h1>Item Listings</h1>
                     @foreach($itemlistings as $itemlisting)
                         <p>{{ $itemlisting-> name }} - {{ $itemlisting->price }} [{{ $itemlisting->keywords }}]</p>
+                        <a href="{{ route('admin.itemlisting') . '/' . $itemlisting->id . '/edit' }}">Update / Delete</a>
                     @endforeach
 
                     <a href="{{ route('admin.itemlisting.create') }}">Create</a>

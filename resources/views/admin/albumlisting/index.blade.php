@@ -10,6 +10,7 @@
                     <h1>Album Listings</h1>
                     @foreach($albumlistings as $albumlisting)
                         <p>{{ $albumlisting->artist }} - {{ $albumlisting->name }}</p>
+                        <a href="{{ route('admin.albumlisting') . '/' . $albumlisting->id . '/edit' }}">Update / Delete</a>
                         <img src="/storage/{{ $albumlisting->cover_image }}"> 
                     @endforeach
 

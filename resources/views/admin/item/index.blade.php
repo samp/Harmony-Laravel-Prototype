@@ -10,6 +10,7 @@
                     <h1>Items</h1>
                     @foreach($items as $item)
                         <p>{{ $item->itemlisting->name }} ({{ $item->itemListing->price }}) - {{ $item->size }}</p>
+                        <a href="{{ route('admin.item') . '/' . $item->id . '/edit' }}">Update / Delete</a>
                     @endforeach
 
                     <a href="{{ route('admin.item.create') }}">Create</a>

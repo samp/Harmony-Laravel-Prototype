@@ -33,4 +33,31 @@ class CarouselController extends Controller
         
         return redirect(route('admin.carousel'));
     }
+
+    public function edit(Carousel $carousel)
+    {
+        return View::make('admin.carousel.edit')->with('carousel', $carousel);
+    }
+
+    public function update(Carousel $carousel)
+    {
+        $attributes = request()->validate([
+            'description' => ['required'],
+            'link' => ['required']
+        ]);
+
+        $carousel->description = request()->get('description');
+        $carousel->link = request()->get('link');
+
+        $carousel->save();
+
+        return redirect(route('admin.carousel'));
+    }
+
+    public function destroy(Carousel $carousel)
+    {
+        $carousel->delete();
+
+        return redirect(route('admin.carousel'));
+    }
 }

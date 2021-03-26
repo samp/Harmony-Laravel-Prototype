@@ -10,9 +10,9 @@
                     <h1>Album Listings</h1>
                     @foreach($albums as $album)
                         <p>{{ $album->albumListing->artist }} - {{ $album->albumListing->name }} ({{ $album->format}}) - {{ $album->price }}</p>
+                        <a href="{{ route('admin.album') . '/' . $album->id . '/edit' }}">Update / Delete</a>
                     @endforeach
-
-                    <a href="{{ route('admin.album.create') }}">Create</a>
+                    <p><a href="{{ route('admin.album.create') }}">Create</a></p>
                 </div>
             </div>
         </div>

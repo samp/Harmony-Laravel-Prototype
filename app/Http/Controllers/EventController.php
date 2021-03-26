@@ -47,4 +47,37 @@ class EventController extends Controller
         
         return redirect(route('admin.event'));
     }
+
+    public function edit(Event $event)
+    {
+        return View::make('admin.event.edit')->with('event', $event);
+    }
+
+    public function update(Event $event)
+    {
+        $attributes = request()->validate([
+            'name' => ['required'],
+            'artist' => ['required'],
+            'description' => ['required'],
+            'time' => ['required', 'date'],
+            'location' => ['required'],
+        ]);
+
+        $event->name = request()->get('name');
+        $event->artist = request()->get('artist');
+        $event->description = request()->get('description');
+        $event->time = request()->get('time');
+        $event->location = request()->get('location');
+
+        $event->save();
+
+        return redirect(route('admin.event'));
+    }
+
+    public function destroy(Event $event)
+    {
+        $event->delete();
+
+        return redirect(route('admin.event'));
+    }
 }
