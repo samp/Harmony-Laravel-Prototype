@@ -42,6 +42,9 @@ Route::middleware('can:adminAbility')->group(function() {
         Route::get('item', [App\Http\Controllers\ItemController::class, 'index'])->name('admin.item');
         Route::get('item/create', [App\Http\Controllers\ItemController::class, 'create'])->name('admin.item.create');
         Route::post('item/create', [App\Http\Controllers\ItemController::class, 'store']);
+        Route::get('carousel', [App\Http\Controllers\CarouselController::class, 'index'])->name('admin.carousel');
+        Route::get('carousel/create', [App\Http\Controllers\CarouselController::class, 'create'])->name('admin.carousel.create');
+        Route::post('carousel/create', [App\Http\Controllers\CarouselController::class, 'store']);
     });
 });
 

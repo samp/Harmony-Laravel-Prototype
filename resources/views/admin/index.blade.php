@@ -10,7 +10,7 @@
                     <h2 class="text-3xl font-poppins">Album Listings</h2>
                     <div
                         class="ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                        <a href="REPLACEME" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
+                        <a href="{{ route('admin.albumlisting.create') }}" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
                 </div>
                 @foreach ($albumlistings as $albumlisting)
                     <div class="mb-4">
@@ -43,7 +43,7 @@
                     <h2 class="text-3xl font-poppins">Item Listings</h2>
                     <div
                         class="ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                        <a href="REPLACEME" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
+                        <a href="{{ route('admin.itemlisting.create') }}" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
                 </div>
                 <ul>
                     @foreach ($itemlistings as $itemlisting)
@@ -62,7 +62,7 @@
                     <h2 class="text-3xl font-poppins">Events</h2>
                     <div
                         class="ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                        <a href="REPLACEME" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
+                        <a href="{{ route('admin.event.create') }}" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add New</span></a></div>
                 </div>
                 <ul>
                     @foreach ($events as $event)

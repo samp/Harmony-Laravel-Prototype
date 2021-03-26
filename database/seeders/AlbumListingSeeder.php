@@ -143,7 +143,7 @@ class AlbumListingSeeder extends Seeder
         DB::table('album_listings')->insert([
             'id' => 15,
             'name' => "Trench",
-            'artist' => "Magic Hours",
+            'artist' => "Twenty-One Pilots",
             'description' => "Trench is the fifth studio album by American musical duo Twenty-One Pilots, released on October 5, 2018 through Fuelled by Ramen. It is the band's first studio album in three years, after the breakthrough success of their previous album, Blurryface.",
             'genre' => "Rock",
             'release_date' => \Carbon\Carbon::parse('2018-10-05'),
