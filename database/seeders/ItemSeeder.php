@@ -23,6 +23,7 @@ class ItemSeeder extends Seeder
         DB::table('items')->insert([
             'id' => 2,
             'size' => "Medium",
+            'stock' => "0",
             'item_listing_id' => 1,
         ]);
         DB::table('items')->insert([

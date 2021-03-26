@@ -1,6 +1,27 @@
 <x-app-layout>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col-reverse sm:grid sm:grid-cols-3 md:grid-cols-4 gap-4 mb-4">
+        <div class="col-span-2 flex flex-row gap-2">
+                    <div class="p-2 text-xl text-gray-700">
+                        <i class="fas fa-filter" aria-hidden="true"></i>
+                    </div>
+                    @foreach ($types as $type)
+                        @if ($type == $selectedtype)
+                            <div
+                                class="rounded-md border-2 hover:border-purple-400 hover:bg-white bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white border-transparent transition-colors">
+                                <a href="?type=" class="flex flex-row align-middle p-2"><span
+                                        class="m-auto">{{ $type }}</span></a>
+                            </div>
+                        @else
+                            <div
+                                class="bg-white rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
+                                <a href="?type={{ $type }}" class="flex flex-row align-middle p-2"><span
+                                        class="m-auto">{{ $type }}</span></a>
+                            </div>
+                        @endif
+                    @endforeach
+
+                </div>
             <div class="col-start-4 relative sm:ml-auto text-gray-600">
                 <form>
                     <input
@@ -23,8 +44,17 @@
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-medium font-poppins text-xl">{{ $item->name }}</h3>
                         <h4 class="text-lg font-poppins">{{ $item->artist }}</h4>
-                        <div class="py-4">
-                            <p>{{ 'size stock info here maybe??' }}</p>
+                        <div class="py-2">
+                            @foreach ($item->items as $type)
+                            <div class="flex flex-row">
+                                <span class="text-gray-700">{{ $type->size }}</span>
+                                @if (is_null($type->stock) or $type->stock > 0)
+                                <span class="ml-auto"></span>
+                                @else
+                                <span class="ml-auto text-red-600">Out of stock</span>
+                                @endif
+                            </div>
+                            @endforeach
                         </div>
                         <div
                             class="text-right mt-auto ml-auto w-auto rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
