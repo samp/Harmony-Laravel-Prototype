@@ -23,13 +23,15 @@
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="{{ asset('fa/css/all.css') }}"" rel=" stylesheet">
+    <link href="{{ asset('fa/css/all.css') }}" rel=" stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    {{ $scripts ?? "" }}
 </head>
 
 <body class="font-sans antialiased w-100">
