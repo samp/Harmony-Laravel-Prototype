@@ -1881,5 +1881,642 @@ class TrackSeeder extends Seeder
         ]);
         
         
+
+        DB::table('tracks')->insert([
+            'name' => "I Believe in You",
+            'length' => "3:22",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Jam",
+            'length' => "4:11",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Respect",
+            'length' => "2:28",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Santana Medley",
+            'length' => "7:19",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "It's Alright",
+            'length' => "2:24",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Dr. Feelgood (Love Is a Serious Business)",
+            'length' => "5:23",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Maybe Your Baby",
+            'length' => "3:42",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Ain't No Way",
+            'length' => "3:03",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Mancini Medley",
+            'length' => "1:28",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Blues in C (If I Had a Harem) ",
+            'length' => "8:11",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Just My Imagination (Running Away With Me)",
+            'length' => "7:45",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Fight the Power",
+            'length' => "7:43",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Sweet Thing (With Chaka Khan)",
+            'length' => "8:06",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Proud Mary",
+            'length' => "3:16",
+            'disc_id' => 26,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Get Up (I Feel Like Being A) Sex Machine",
+            'length' => "7:45",
+            'disc_id' => 26,
+        ]);
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "I Believe in You",
+            'length' => "3:22",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Jam",
+            'length' => "4:11",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Respect",
+            'length' => "2:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Santana Medley",
+            'length' => "7:19",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "It's Alright",
+            'length' => "2:24",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Dr. Feelgood (Love Is a Serious Business)",
+            'length' => "5:23",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Maybe Your Baby",
+            'length' => "3:42",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Ain't No Way",
+            'length' => "3:03",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Mancini Medley",
+            'length' => "1:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Blues in C (If I Had a Harem) ",
+            'length' => "8:11",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Just My Imagination (Running Away With Me)",
+            'length' => "7:45",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Fight the Power",
+            'length' => "7:43",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Sweet Thing (With Chaka Khan)",
+            'length' => "8:06",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Proud Mary",
+            'length' => "3:16",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Get Up (I Feel Like Being A) Sex Machine",
+            'length' => "7:45",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 27,
+        ]);
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "High Expectations (Intro)",
+            'length' => "1:27",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Bad Behaviour",
+            'length' => "3:25",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Don't Call Me Up",
+            'length' => "2:58",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "FML",
+            'length' => "3:12",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "We Don't Say...",
+            'length' => "3:11",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Selfish Love (Feat. Kamille)",
+            'length' => "3:12",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Lucky (Interlude)",
+            'length' => "1:14",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Mad Love",
+            'length' => "2:49",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Trouble",
+            'length' => "3:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Put Your Name On It",
+            'length' => "3:41",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Stckhlm Syndrome (Interlude)",
+            'length' => "2:25",
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "OK (Anxiety Anthem)",
+            'length' => "3:36",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "I Belong to Me",
+            'length' => "2:38",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "High Expectations (Outro)",
+            'length' => "2:25",
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Finders Keepers (With Kojo Funds)",
+            'length' => "4:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Fine Line (With Not3s)",
+            'length' => "3:32",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "My Lover (With Not3s)",
+            'length' => "3:12",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Ring Ring (With Jax Jones)",
+            'length' => "3:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Cigarette (With RAYE & Stefflon Don)",
+            'length' => "3:08",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Not Sayin'",
+            'length' => "3:43",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 28,
+        ]);
+
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "Jumpsuit",
+            'length' => "3:58",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Levitate",
+            'length' => "2:25",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Morph",
+            'length' => "4:19",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "My Blood",
+            'length' => "3:49",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Chlorin",
+            'length' => "5:24",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Smithereens",
+            'length' => "2:57",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Neon Gravestones",
+            'length' => "4:00",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Hype",
+            'length' => "4:25",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Nico and the Niners",
+            'length' => "3:45",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Cut My Lip",
+            'length' => "4:43",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Bandito",
+            'length' => "5:31",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Pet Cheetah",
+            'length' => "3:18",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Legend",
+            'length' => "2:53",
+            'disc_id' => 29,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Leave the City",
+            'length' => "4:40",
+            'disc_id' => 29,
+        ]);
+
+
+        DB::table('tracks')->insert([
+            'name' => "Baby Come Home",
+            'length' => "3:00",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Keep Your Shoes On",
+            'length' => "2:51",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Inevitable",
+            'length' => "3:53",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Only the Horses",
+            'length' => "3:38",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Year of Living Dangerously",
+            'length' => "3:52",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Let's Have a Kiki",
+            'length' => "3:50",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Shady Love",
+            'length' => "3:56",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "San Luis Obispo",
+            'length' => "3:48",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Self Control",
+            'length' => "3:12",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Best in Me",
+            'length' => "3:44",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "The Secret Life of Letters",
+            'length' => "3:48",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Somewhere",
+            'length' => "3:40",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 30,
+        ]);
+
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "Cyber Sex",
+            'length' => "2:46",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Won't Bite",
+            'length' => "3:15",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Rules",
+            'length' => "3:07",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Bottom Bitch",
+            'length' => "3:18",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Say So",
+            'length' => "3:58",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Like That (Feat. Gucci Mane)",
+            'length' => "2:43",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Talk Dirty",
+            'length' => "4:01",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Addiction",
+            'length' => "3:28",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Streets",
+            'length' => "3:47",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Shine",
+            'length' => "2:40",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Better than Me",
+            'length' => "3:22",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Juicy (with Tyga)",
+            'length' => "3:23",
+            'buyable' => true,
+            'price' => 0.99,
+            'disc_id' => 31,
+        ]);
+
+
+
+
+        DB::table('tracks')->insert([
+            'name' => "Cyber Sex",
+            'length' => "2:46",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Won't Bite",
+            'length' => "3:15",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Rules",
+            'length' => "3:07",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Bottom Bitch",
+            'length' => "3:18",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Say So",
+            'length' => "3:58",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Like That (Feat. Gucci Mane)",
+            'length' => "2:43",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Talk Dirty",
+            'length' => "4:01",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Addiction",
+            'length' => "3:28",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Streets",
+            'length' => "3:47",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Shine",
+            'length' => "2:40",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Better than Me",
+            'length' => "3:22",
+            'disc_id' => 32,
+        ]);
+        DB::table('tracks')->insert([
+            'name' => "Juicy (with Tyga)",
+            'length' => "3:23",
+            'disc_id' => 32,
+        ]);
+
+
     }
 }

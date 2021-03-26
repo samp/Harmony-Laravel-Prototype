@@ -168,5 +168,48 @@ class AlbumSeeder extends Seeder
             'stock' => 40,
             'album_listing_id' => 12
         ]);
+        DB::table('albums')->insert([
+            'id' => 23,
+            'format' => "CD",
+            'price' => 12.99,
+            'stock' => 50,
+            'album_listing_id' => 13
+        ]);
+        DB::table('albums')->insert([
+            'id' => 24,
+            'format' => "Digital",
+            'price' => 8.99,
+            'album_listing_id' => 13
+        ]);
+        DB::table('albums')->insert([
+            'id' => 25,
+            'format' => "Digital",
+            'price' => 8.99,
+            'album_listing_id' => 14
+        ]);
+        DB::table('albums')->insert([
+            'id' => 26,
+            'format' => "CD",
+            'price' => 11.99,
+            'album_listing_id' => 15
+        ]);
+        DB::table('albums')->insert([
+            'id' => 27,
+            'format' => "Digital",
+            'price' => 4.99,
+            'album_listing_id' => 16
+        ]);
+        DB::table('albums')->insert([
+            'id' => 28,
+            'format' => "Digital",
+            'price' => 4.99,
+            'album_listing_id' => 17
+        ]);
+        DB::table('albums')->insert([
+            'id' => 29,
+            'format' => "CD",
+            'price' => 9.99,
+            'album_listing_id' => 17
+        ]);
     }
 }
