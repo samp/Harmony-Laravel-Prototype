@@ -56,12 +56,12 @@ class SearchController extends Controller
         if($selectedtype == null) {
             if($search == null)
             {
-                $itemlistings = ItemListing::paginate(16);
+                $itemlistings = ItemListing::paginate(12);
             } else {
-                $itemlistings = ItemListing::where('name', 'like', '%' . $search . '%')->orWhere('keywords', 'like', '%' . $search . '%')->paginate(16)->appends(request()->query());
+                $itemlistings = ItemListing::where('name', 'like', '%' . $search . '%')->orWhere('keywords', 'like', '%' . $search . '%')->paginate(12)->appends(request()->query());
             }
         } else {
-            $itemlistings = ItemListing::where('type', $selectedtype)->paginate(16)->appends(request()->query());
+            $itemlistings = ItemListing::where('type', $selectedtype)->paginate(12)->appends(request()->query());
         }
         
         return view('merch.index')->with('itemlistings', $itemlistings)->with('selectedtype', $selectedtype)->with('types', $types);
