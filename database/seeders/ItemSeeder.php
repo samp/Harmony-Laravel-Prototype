@@ -15,52 +15,114 @@ class ItemSeeder extends Seeder
     public function run()
     {
         DB::table('items')->insert([
-            'id' => 1,
             'size' => "Small",
             'stock' => "100",
             'item_listing_id' => 1,
         ]);
         DB::table('items')->insert([
-            'id' => 2,
             'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 1,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
             'stock' => "0",
             'item_listing_id' => 1,
         ]);
         DB::table('items')->insert([
-            'id' => 3,
-            'size' => "Large",
-            'item_listing_id' => 1,
-        ]);
-        DB::table('items')->insert([
-            'id' => 4,
-            'size' => "One size",
+            'size' => "Small",
+            'stock' => "100",
             'item_listing_id' => 2,
         ]);
         DB::table('items')->insert([
-            'id' => 5,
-            'size' => "One size",
+            'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 2,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
+            'stock' => "100",
+            'item_listing_id' => 2,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Small",
+            'stock' => "100",
             'item_listing_id' => 3,
         ]);
         DB::table('items')->insert([
-            'id' => 6,
-            'size' => "One size",
+            'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 3,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
+            'stock' => "100",
+            'item_listing_id' => 3,
+        ]);
+        DB::table('items')->insert([
+            'size' => "One Size",
+            'stock' => "500",
             'item_listing_id' => 4,
         ]);
-
         DB::table('items')->insert([
-            'id' => 7,
             'size' => "Small",
+            'stock' => "100",
             'item_listing_id' => 5,
         ]);
         DB::table('items')->insert([
-            'id' => 8,
             'size' => "Medium",
+            'stock' => "100",
             'item_listing_id' => 5,
         ]);
         DB::table('items')->insert([
-            'id' => 9,
             'size' => "Large",
+            'stock' => "100",
             'item_listing_id' => 5,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Small",
+            'stock' => "100",
+            'item_listing_id' => 6,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 6,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
+            'stock' => "100",
+            'item_listing_id' => 6,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Small",
+            'stock' => "100",
+            'item_listing_id' => 7,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 7,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
+            'stock' => "100",
+            'item_listing_id' => 7,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Small",
+            'stock' => "100",
+            'item_listing_id' => 8,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Medium",
+            'stock' => "100",
+            'item_listing_id' => 8,
+        ]);
+        DB::table('items')->insert([
+            'size' => "Large",
+            'stock' => "100",
+            'item_listing_id' => 8,
         ]);
     }
 
