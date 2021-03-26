@@ -9,12 +9,12 @@
     </x-slot>
 
     <div
-        class="w-full h-96 mb-6 bg-gray-500 text-white text-4xl text-center flex justify-center items-center rounded-xl shadow overflow-hidden">
+        class="w-full h-96 mb-6 bg-gray-500 flex justify-center items-center rounded-xl shadow overflow-hidden">
         <div class="main-carousel w-full" data-flickity='{ "cellAlign": "left", "contain": true }'>
             @foreach ($carousel as $carouselcell)
-                <div class="carousel-cell w-full"><a href="{{ $carouselcell->link }}"
-                        alt="{{ $carouselcell->description }}"><img
-                            src="{{ 'storage/' . $carouselcell->image }}" class="object-cover w-full"></a></div>
+                <div class="carousel-cell w-full"><a href="{{ $carouselcell->link }}"><img
+                            src="{{ 'storage/' . $carouselcell->image }}" class="object-cover w-full"
+                            alt="{{ $carouselcell->description }}"></a></div>
             @endforeach
         </div>
     </div>
