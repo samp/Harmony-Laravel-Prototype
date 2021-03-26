@@ -16,24 +16,6 @@ class ItemListingSeeder extends Seeder
     {
         DB::table('item_listings')->insert([
             'id' => 1,
-            'name' => "Warped Cover Hoodie",
-            'keywords' => "Ariana Grande, Sweetener",
-            'price' =>  60.00,
-            'description' => "Screenprinted front and back graphics",
-            'type' => 'Hoodie',
-            'product_image' => "static/warped cover hoodie.png",
-        ]);
-        DB::table('item_listings')->insert([
-            'id' => 2,
-            'name' => "Positions Sweatpants",
-            'keywords' => "Ariana Grande, Positions",
-            'price' =>  65.00,
-            'description' => "Screenprinted front graphics",
-            'type' => 'Sweatpants',
-            'product_image' => "static/positions_sweatpants.png",
-        ]);
-        DB::table('item_listings')->insert([
-            'id' => 3,
             'name' => "Tryna meet your mama",
             'keywords' => "Ariana Grande, Positions",
             'price' =>  45.00,
@@ -42,12 +24,31 @@ class ItemListingSeeder extends Seeder
             'product_image' => "static/positions-longsleeve-t-shirt.png",
         ]);
         DB::table('item_listings')->insert([
+            'id' => 2,
+            'name' => "Warped Cover Hoodie",
+            'keywords' => "Ariana Grande, Sweetener",
+            'price' =>  60.00,
+            'description' => "Screenprinted front and back graphics",
+            'type' => 'Hoodie',
+            'product_image' => "static/warped cover hoodie.png",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 3,
+            'name' => "Positions Sweatpants",
+            'keywords' => "Ariana Grande, Positions",
+            'price' =>  65.00,
+            'description' => "Screenprinted front graphics",
+            'type' => 'Joggers',
+            'product_image' => "static/positions_sweatpants.png",
+        ]);
+
+        DB::table('item_listings')->insert([
             'id' => 4,
             'name' => "Black Face Mask",
             'keywords' => "Ariana Grande, Positions",
             'price' =>  15.00,
             'description' => "100% cotton black cloth face covering",
-            'type' => 'Face Mask',
+            'type' => 'Mask',
             'product_image' => "static/positions_facemask.png",
         ]);
         DB::table('item_listings')->insert([
@@ -85,6 +86,69 @@ class ItemListingSeeder extends Seeder
             'description' => "Classic, generous, boxy fit, 100% preshrunk cotton. Professionally printed using the latest and best digital print technology.",
             'type' => 'T-Shirt',
             'product_image' => "static/dimmu-t-shirt.jpg",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 9,
+            'name' => "One More Time Dad Hat",
+            'keywords' => "Glory, Britney Spears",
+            'price' =>  20.00,
+            'description' => "Pink dad cap with adjustable backing and embroidered, white flower detail on the front.",
+            'type' => 'Hat',
+            'product_image' => "static/britneyhat.jpg",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 10,
+            'name' => "Stronger Rainbow Tank Top",
+            'keywords' => "Glory, Britney Spears",
+            'price' =>  30.00,
+            'description' => "Unisex black muscle tank with rainbow shiny foil graphic.",
+            'type' => 'Vest',
+            'product_image' => "static/britneytop.webp",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 11,
+            'name' => "Fleetwood Mac Beanie",
+            'keywords' => "Rumours, Fleetwood Mac",
+            'price' =>  25.00,
+            'description' => "Black, knit unisex beanie with 'Fleetwood Mac' embroidered on the front.",
+            'type' => 'Hat',
+            'product_image' => "static/fleedwoodhat.webp",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 12,
+            'name' => "Melodrama Hands Tee",
+            'keywords' => "lorde t-shirt, melodrama merch, black band t shirt, cotton top",
+            'price' =>  20.00,
+            'description' => "Black cotton T-shirt featuring  lordes melodrama, available in multiple sizes",
+            'type' => 'T-Shirt',
+            'product_image' => "static/lorde.webp",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 13,
+            'name' => "Scissor Sisters Phone Case",
+            'keywords' => "iPhone 12 case, scissor sisters phone case, laura iPhone Case, Clear phone case, Magic Hour",
+            'price' =>  15.00,
+            'description' => "Durable flexible case that grips around the edges of your phone",
+            'type' => 'Case',
+            'product_image' => "static/scissorsistersphone.webp",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 14,
+            'name' => "Still First In Space Tie-Dye T-Shirt",
+            'keywords' => "tie dye t shirt, pink floyd top, pink floyd t shirt, still first in space, pink floyd merch, vintage apparel, The Dark Side of The Moon",
+            'price' =>  30.00,
+            'description' => "Hand-dyed in LA, this 100% ring-spun cotton tee is soft, comfortable and pre-shrunk. Each tee is individually dyed so patterns, colors, and shirt color will vary.",
+            'type' => 'T-Shirt',
+            'product_image' => "static/twenty-one-pilots-t-shirt.jpg",
+        ]);
+        DB::table('item_listings')->insert([
+            'id' => 15,
+            'name' => "Trench Cassette Bundle",
+            'keywords' => "modern cassettes, trench cassette, old style music, twenty-one pilot gifts, physical album bundle  ",
+            'price' =>  10.00,
+            'description' => "Solid Yellow cassette featuring Trench by Twenty-one Pilots including digital downloads of songs like “My Blood” and “Levitate”",
+            'type' => 'Accessories',
+            'product_image' => "static/trenchcassette.webp",
         ]);
     }
 }
