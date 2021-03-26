@@ -1,12 +1,14 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{{ route('index') }}">
+                    <img class="block w-auto h-20" src="{{ asset('images/logo.png') }}">
+                </a>
+            </div>
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4 text-gray-600">
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>
 
