@@ -3,19 +3,28 @@
         Discs
     </x-slot>
 
-    <div class="mt-5">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
-                <div class="p-6">
-                    <h1>Discs</h1>
-                    @foreach($discs as $disc)
-                        <p>{{ $disc->album->albumlisting->artist }} - {{ $disc->album->albumlisting->name }} ({{ $disc->album->format }} - {{ $disc->name }})</p>
-                        <a href="{{ route('admin.disc') . '/' . $disc->id . '/edit' }}">Update / Delete</a>
-                    @endforeach
-
-                    <a href="{{ route('admin.disc.create') }}">Create</a>
-                </div>
+    <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
+        <div class="p-6">
+            <div class="flex flex-row items-center justify-between mb-2">
+                <h1 class="text-3xl font-poppins">Discs</h1>
+                <x-button-link :href="route('admin.disc.create')" class="ml-4">
+                    {{ 'Create' }}
+                </x-button-link>
             </div>
+            @foreach ($discs as $disc)
+                <div class="flex flex-row py-4 justify-between">
+                    <div>
+                        <p>{{ $disc->album->albumlisting->artist }} - {{ $disc->album->albumlisting->name }}
+                            ({{ $disc->album->format }} - {{ $disc->name }})</p>
+                    </div>
+                    <div class="ml-4">
+                        <x-button-link :href="route('admin.disc') . '/' . $disc->id . '/edit'">
+                            {{ 'Edit' }}
+                        </x-button-link>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
+
 </x-app-layout>

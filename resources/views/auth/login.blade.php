@@ -57,7 +57,9 @@
 
 
                 <x-button class="ml-auto">
+                    <a href="#">
                     {{ __('Log in') }}
+                    </a>
                 </x-button>
             </div>
         </form>
