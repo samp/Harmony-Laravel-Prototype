@@ -14,12 +14,10 @@
             @foreach ($carousel as $carouselitem)
                 <div class="flex flex-row py-4 justify-between">
                     <div>
-                        <p>{{ $carouselitem }}</p>
-                        <a href="{{ route('admin.carousel') . '/' . $carouselitem->id . '/edit' }}">Update /
-                            Delete</a>
+                        <p>{{ $carouselitem->description }} - {{ $carouselitem->link }}</p>
                     </div>
                     <div class="ml-4">
-                        <x-button-link :href="route('admin.carousel') . '/' . $carousel->id . '/edit'">
+                        <x-button-link :href="route('admin.carousel') . '/' . $carouselitem->id . '/edit'">
                             {{ 'Edit' }}
                         </x-button-link>
                     </div>

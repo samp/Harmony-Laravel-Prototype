@@ -16,6 +16,6 @@ class IndexController extends Controller
         $itemlistings = ItemListing::orderBy('created_at', 'DESC')->get()->take(2);
         $events = Event::where('time', '>=', date('Y-m-d'))->orderBy('time', 'ASC')->get()->take(2);
         $carousel = Carousel::all();
-        return view('index', ['albumlistings' => $albumlistings, 'itemlistings' => $itemlistings, 'events' => $events, 'caroutsel' => $carousel]);
+        return view('index', ['albumlistings' => $albumlistings, 'itemlistings' => $itemlistings, 'events' => $events, 'carousel' => $carousel]);
     }
 }

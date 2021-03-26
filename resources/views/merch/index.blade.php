@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="title">
+        {{ "Merch" }}
+    </x-slot>
+
     <div class="flex flex-col-reverse sm:grid sm:grid-cols-3 md:grid-cols-4 gap-4 mb-4">
         <div class="col-span-2 flex flex-row gap-2">
             <div class="p-2 text-xl text-gray-700">
