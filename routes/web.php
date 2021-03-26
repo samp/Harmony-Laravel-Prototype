@@ -14,6 +14,7 @@ Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('i
 Route::get('/music', [App\Http\Controllers\SearchController::class, 'musicindex'])->name('music');
 Route::get('/music/{albumlisting}', [App\Http\Controllers\SearchController::class, 'musicshow'])->name('musicshow');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
+Route::get('/events/{event}', [App\Http\Controllers\EventController::class, 'show'])->name('eventsshow');
 Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
 Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow'])->name('merchshow');
 

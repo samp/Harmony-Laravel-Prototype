@@ -25,8 +25,13 @@
                             <label for="size">Size:</label>
                             <select name="size" id="size" class="rounded-lg shadow border-gray-300">
                                 @foreach ($itemlisting->items as $item)
-                                    <option value="{{ $item->id }}">
-                                        {{ $item->size }}</option>
+                                    @if (is_null($item->stock) or $item->stock > 0)
+                                        <option value="{{ $item->id }}">
+                                            {{ $item->size }}</option>
+                                    @else
+                                    <option value="{{ $item->id }}" disabled>
+                                            {{ $item->size }}</option>
+                                    @endif
                                 @endforeach
                             </select>
 
