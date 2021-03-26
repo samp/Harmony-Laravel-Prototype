@@ -10,9 +10,10 @@
                     <h1>Carousel Items</h1>
                     @foreach($carousel as $carouselitem)
                         <p>{{ $carouselitem }}</p>
+                        <a href="{{ route('admin.carousel') . '/' . $carouselitem->id . '/edit' }}">Update / Delete</a>
                     @endforeach
 
-                    <a href="{{ route('admin.carousel.create') }}">Create</a>
+                    <p><a href="{{ route('admin.carousel.create') }}">Create</a></p>
                 </div>
             </div>
         </div>

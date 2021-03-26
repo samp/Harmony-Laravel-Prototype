@@ -10,6 +10,7 @@
                     <h1>Events</h1>
                     @foreach($events as $event)
                         <p>{{ $event->artist }} - {{ $event->name }} ({{ $event->location }} @ {{ $event->time }}) [{{ $event->description}}]</p>
+                        <a href="{{ route('admin.event') . '/' . $event->id . '/edit' }}">Update / Delete</a>
                         <img src="/storage/{{ $event->image }}"> 
                     @endforeach
 

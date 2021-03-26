@@ -10,6 +10,7 @@
                     <h1>Tracks</h1>
                     @foreach($tracks as $track)
                         <p>{{ $track->disc->album->albumlisting->artist }} - {{ $track->disc->album->albumlisting->name }} ({{ $track->disc->album->format }}) - {{ $track->disc->name}} -> {{ $track->name }} ({{ $track->length }})</p>
+                        <a href="{{ route('admin.track') . '/' . $track->id . '/edit' }}">Update / Delete</a>
                     @endforeach
 
                     <a href="{{ route('admin.track.create') }}">Create</a>
