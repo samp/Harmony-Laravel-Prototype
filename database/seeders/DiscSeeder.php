@@ -140,5 +140,40 @@ class DiscSeeder extends Seeder
             'album_id' => 22,
             'name' => "Disc 1",
         ]);
+        DB::table('discs')->insert([
+            'id' => 26,
+            'album_id' => 23,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 27,
+            'album_id' => 24,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 28,
+            'album_id' => 25,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 29,
+            'album_id' => 26,
+            'name' => "Disc 1",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 30,
+            'album_id' => 27,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 31,
+            'album_id' => 28,
+            'name' => "MP3",
+        ]);
+        DB::table('discs')->insert([
+            'id' => 32,
+            'album_id' => 29,
+            'name' => "Disc 1",
+        ]);
     }
 }

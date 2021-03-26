@@ -39,7 +39,7 @@ class AlbumListingSeeder extends Seeder
             'description' => "Eighth studio album by the legendary English progressive rock band. Remastered and re-released as part of the 'Why Pink Floyd...?' campaign, the album is widely regarded as one of the greatest of all time and includes the tracks 'The Great Gig in the Sky', 'Money', 'Time', 'Any Colour You Like' and 'Us and Them'.",
             'genre' => "Rock",
             'release_date' => \Carbon\Carbon::parse('1973-03-01'),
-            'cover_image' => "static/darksideofthemoon.jpeg",
+            'cover_image' => "static/darksideofthemoon.jpg",
         ]);
         DB::table('album_listings')->insert([
             'id' => 4,
@@ -122,7 +122,51 @@ class AlbumListingSeeder extends Seeder
             'release_date' => \Carbon\Carbon::parse('2016-08-26'),
             'cover_image' => "static/glory.jpg",
         ]);
-
+        DB::table('album_listings')->insert([
+            'id' => 13,
+            'name' => "Under the Covers",
+            'artist' => "Prince",
+            'description' => "A master of both composition and of interpretation, Prince was among an elite group of artists who was as comfortable performing his own material as he was covering numbers written by others. This remarkable CD brings together the great man s versions of songs originally written and performed by other musical greats, which Prince played live in concert across his sadly short career. ",
+            'genre' => "Rock",
+            'release_date' => \Carbon\Carbon::parse('2017-10-13'),
+            'cover_image' => "static/underthecovers.jpg",
+        ]);
+        DB::table('album_listings')->insert([
+            'id' => 14,
+            'name' => "High Expectations",
+            'artist' => "Mabel",
+            'description' => "High Expectations is the debut studio album by British singer and songwriter Mabel, released on 2 August 2019 internationally by Polydor Records and in the United States by Capitol Records and Universal. Mabel worked with writers and producers such as Tre Jean-Marie, Steve Mac and MNEK to create the album, with its music incorporating genres of pop and R&B.",
+            'genre' => "Pop",
+            'release_date' => \Carbon\Carbon::parse('2019-08-02'),
+            'cover_image' => "static/highexpectations.jpg",
+        ]);
+        DB::table('album_listings')->insert([
+            'id' => 15,
+            'name' => "Trench",
+            'artist' => "Magic Hours",
+            'description' => "Trench is the fifth studio album by American musical duo Twenty-One Pilots, released on October 5, 2018 through Fuelled by Ramen. It is the band's first studio album in three years, after the breakthrough success of their previous album, Blurryface.",
+            'genre' => "Rock",
+            'release_date' => \Carbon\Carbon::parse('2018-10-05'),
+            'cover_image' => "static/trench.webp",
+        ]);
+        DB::table('album_listings')->insert([
+            'id' => 16,
+            'name' => "Magic Hour",
+            'artist' => "Scissor Sisters",
+            'description' => "Magic Hour is the fourth studio album by the American group Scissor Sisters, released on May 25, 2012 by Polydor Records. The first single from the album was initially 'Shady Love' but was later replaced by 'Only the Horses', co-produced by recording artist and DJ Calvin Harris, which entered and peaked at number twelve on the UK Singles Chart.",
+            'genre' => "Dance",
+            'release_date' => \Carbon\Carbon::parse('2012-05-25'),
+            'cover_image' => "static/magichours.webp",
+        ]);
+        DB::table('album_listings')->insert([
+            'id' => 17,
+            'name' => "Hot Pink",
+            'artist' => "Doja Cat",
+            'description' => "Hot Pink is the second studio album by American singer and rapper Doja Cat. The album was released on November 7, 2019, by Kemosabe and RCA Records. A departure from the sound of her debut album Amala (2018), Hot Pink is a pop and R&B record containing elements of funk and soul. It was written by Doja Cat alongside other songwriters and producers. Hot Pink was predominantly produced by Yeti Beats and Dr. Luke (under the pseudonym Tyson Trax). Guest vocals are contributed by Smino, Tyga, and Gucci Mane.",
+            'genre' => "Pop",
+            'release_date' => \Carbon\Carbon::parse('2019-11-07'),
+            'cover_image' => "static/hotpink.jpg",
+        ]);
         
     }
 }

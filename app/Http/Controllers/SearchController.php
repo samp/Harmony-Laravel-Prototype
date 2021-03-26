@@ -17,12 +17,12 @@ class SearchController extends Controller
         {
             if($search == null)
             {
-                $albumlistings = AlbumListing::paginate(16);
+                $albumlistings = AlbumListing::orderBy('release_date', 'DESC')->paginate(12);
             } else {
-                $albumlistings = AlbumListing::where('name', 'like', '%' . $search . '%')->orWhere('artist', 'like', '%' . $search . '%')->paginate(16)->appends(request()->query());
+                $albumlistings = AlbumListing::orderBy('release_date', 'DESC')->where('name', 'like', '%' . $search . '%')->orWhere('artist', 'like', '%' . $search . '%')->paginate(12)->appends(request()->query());
             }
         } else {
-            $albumlistings = AlbumListing::where('genre', $selectedgenre)->paginate(16)->appends(request()->query());
+            $albumlistings = AlbumListing::orderBy('release_date', 'DESC')->where('genre', $selectedgenre)->paginate(12)->appends(request()->query());
         }
 
         return view('music.index')->with('albumlistings', $albumlistings)->with('genres', $genres)->with('selectedgenre', $selectedgenre);
