@@ -3,7 +3,7 @@
         {{ $itemlisting->name }}
     </x-slot>
 
-    <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
+    <x-card class="flex-col sm:flex-row">
         <div class="h-full sm:max-w-sm">
             <picture>
                 <source srcset="{{ '../storage/' . $itemlisting->product_image }}">
@@ -23,9 +23,9 @@
             <div class="flex flex-col h-full">
                 <p>{{ $itemlisting->description }}</p>
                 <div class="flex flex-row justify-between">
-                    <div class="grid grid-cols-2 items-center">
+                    <div class="grid grid-cols-2 items-center mt-4">
                         <label for="size">Size:</label>
-                        <select name="size" id="size" class="rounded-lg shadow border-gray-300">
+                        <select name="size" id="size" class="rounded-lg shadow border-gray-300 dark:border-transparent dark:bg-truegray-600 dark:placeholder-truegray-100">
                             @foreach ($itemlisting->items as $item)
                                 @if (is_null($item->stock) or $item->stock > 0)
                                     <option value="{{ $item->id }}">
@@ -51,5 +51,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </x-card>
 </x-app-layout>
