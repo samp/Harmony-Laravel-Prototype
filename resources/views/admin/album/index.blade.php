@@ -3,18 +3,29 @@
         Albums
     </x-slot>
 
-    <div class="mt-5">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
-                <div class="p-6">
-                    <h1>Album Listings</h1>
-                    @foreach($albums as $album)
-                        <p>{{ $album->albumListing->artist }} - {{ $album->albumListing->name }} ({{ $album->format}}) - {{ $album->price }}</p>
-                        <a href="{{ route('admin.album') . '/' . $album->id . '/edit' }}">Update / Delete</a>
-                    @endforeach
-                    <p><a href="{{ route('admin.album.create') }}">Create</a></p>
-                </div>
+    <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
+        <div class="p-6">
+            <div class="flex flex-row items-center justify-between mb-2">
+                <h1 class="text-3xl font-poppins">Albums</h1>
+                <x-button-link :href="route('admin.album.create')" class="ml-4">
+                    {{ 'Create' }}
+                </x-button-link>
             </div>
+            @foreach ($albums as $album)
+                <div class="flex flex-row py-4 justify-between">
+                    <div>
+                        <p>{{ $album->albumListing->artist }} - {{ $album->albumListing->name }}
+                            ({{ $album->format }})
+                            - {{ $album->price }}</p>
+                    </div>
+                    <div class="ml-4">
+                        <x-button-link :href="route('admin.album') . '/' . $album->id . '/edit'">
+                            {{ 'Edit' }}
+                        </x-button-link>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
+
 </x-app-layout>

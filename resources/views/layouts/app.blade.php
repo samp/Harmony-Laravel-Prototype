@@ -37,7 +37,7 @@
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="flex-grow max-w-screen-lg m-auto my-5 px-4 lg:px-0 font-opensans">
+        <main class="flex-grow max-w-screen-lg m-auto my-5 px-4 sm:px-6 lg:px-8 font-opensans">
             {{ $slot }}
         </main>
 
