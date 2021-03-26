@@ -23,6 +23,7 @@ class CarouselController extends Controller
     {
         $attributes = request()->validate([
             'image' => ['required', 'image'],
+            'description' => ['required'],
             'link' => ['required']
         ]);
 

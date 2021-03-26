@@ -55,10 +55,6 @@
                         </div>
                     </div>
                 </div>
-
-                @if ($loop->iteration == 4)
-                    @break
-                @endif
             @empty
                 There are no products to display.
             @endforelse
