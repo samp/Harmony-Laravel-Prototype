@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        {{ $albumlisting->name }} - {{ $albumlisting->artist }}
+    </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
         <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
@@ -72,7 +75,7 @@
                         </div>
 
                     @empty
-                        There is no related merch for this album.
+                    <p class="p-4">There are no related products to display.</p>
                     @endforelse
                 </div>
             </div>
