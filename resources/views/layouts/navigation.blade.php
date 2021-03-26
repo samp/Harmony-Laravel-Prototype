@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white shadow font-poppins">
+<nav x-data="{ open: false }" class="bg-white dark:bg-truegray-800 shadow font-poppins">
     <!-- Primary Navigation Menu -->
     <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -53,14 +53,15 @@
             <div class="flex flex-row">
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                        <div class="h-8 w-8"><span class="leading-8 align-middle text-xl"><i class="fas fa-shopping-cart"></i></span></div>
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-truegray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                        <div class="h-8 w-8"><span class="leading-8 align-middle text-xl"><i
+                                    class="fas fa-shopping-cart"></i></span></div>
                     </button>
                 </div>
                 <!-- Hamburger -->
                 <div class="-mr-2 ml-4 flex items-center sm:hidden">
                     <button @click="open = ! open"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-truegray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                         <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -92,32 +93,28 @@
         <!-- Responsive Settings Options -->
         @auth
             <div class="pt-4 pb-1 border-t border-gray-200">
-                <div class="flex items-center px-4">
-                    <div class="flex-shrink-0">
-                        <svg class="h-10 w-10 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </div>
 
-                    <div class="ml-3">
-                        <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                    </div>
-                </div>
+                @can('adminAbility')
+                    <x-responsive-nav-link :href="route('admin')">
+                        {{ __('Admin') }}
+                    </x-responsive-nav-link>
+                @else
+                    <x-responsive-nav-link :href="route('index')">
+                        {{ __('Account') }}
+                    </x-responsive-nav-link>
+                @endcan
 
-                <div class="mt-3 space-y-1">
-                    <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
 
-                        <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
-                            {{ __('Log out') }}
-                        </x-responsive-nav-link>
-                    </form>
-                </div>
+
+                <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                                                        this.closest('form').submit();">
+                        {{ __('Log out') }}
+                    </x-responsive-nav-link>
+                </form>
+
             </div>
         @endauth
         @guest

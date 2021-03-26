@@ -35,7 +35,7 @@
 </head>
 
 <body class="font-sans antialiased w-100">
-    <div class="flex flex-col min-h-screen bg-gray-100">
+    <div class="flex flex-col min-h-screen bg-gray-100 dark:bg-truegray-900">
         @include('layouts.navigation')
 
         <!-- Page Content -->
