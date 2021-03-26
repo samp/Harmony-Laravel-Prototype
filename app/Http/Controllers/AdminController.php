@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\AlbumListing;
 use App\Models\ItemListing;
 use App\Models\Event;
+use App\Models\Carousel;
 use View;
 
 class AdminController extends Controller
@@ -15,6 +16,7 @@ class AdminController extends Controller
         $albumlistings = AlbumListing::all();
         $itemlistings = ItemListing::all();
         $events = Event::all();
-        return View::make('admin.index')->with('albumlistings', $albumlistings)->with('itemlistings', $itemlistings)->with('events', $events);
+        $carousel = Carousel::all();
+        return View::make('admin.index')->with('albumlistings', $albumlistings)->with('itemlistings', $itemlistings)->with('events', $events)->with('carousel', $carousel);
     }
 }

@@ -10,6 +10,7 @@
                     <h1>Discs</h1>
                     @foreach($discs as $disc)
                         <p>{{ $disc->album->albumlisting->artist }} - {{ $disc->album->albumlisting->name }} ({{ $disc->album->format }} - {{ $disc->name }})</p>
+                        <a href="{{ route('admin.disc') . '/' . $disc->id . '/edit' }}">Update / Delete</a>
                     @endforeach
 
                     <a href="{{ route('admin.disc.create') }}">Create</a>
