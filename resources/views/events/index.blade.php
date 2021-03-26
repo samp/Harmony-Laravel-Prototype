@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="title">
+        Events
+    </x-slot>
+    
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4">
             @foreach ($events as $event)

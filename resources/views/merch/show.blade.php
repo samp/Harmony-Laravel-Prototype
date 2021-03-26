@@ -1,5 +1,8 @@
 <x-app-layout>
-
+    <x-slot name="title">
+        {{ $itemlisting->name }}
+    </x-slot>
+    
     <div class="max-w-7xl w-full mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
             <div class="h-full sm:max-w-sm">
