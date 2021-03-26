@@ -21,7 +21,7 @@ class EventSeeder extends Seeder
             'time' => \Carbon\Carbon::parse('2021-08-26 08:00'),
             'location' => "Bramham Park, Wetherby",
             'description' => "Festivals… They are back! Since the government’s roadmap out of lockdown was announced, several UK festivals have said they are planning to go ahead this summer. One of the first to confirm its return was Leeds Festival.",
-            'image' => "static/leeds-2021-small.webp",
+            'image' => "static/leeds-2021.webp",
         ]);
         DB::table('events')->insert([
             'id' => 2,
@@ -39,7 +39,7 @@ class EventSeeder extends Seeder
             'time' => \Carbon\Carbon::parse('2021-05-16 18:00'),
             'location' => "Manchester AO Arena",
             'description' => "McFly have announced their rescheduled dates for their Young Dumb Thrills Tour! They will now play UK arenas throughout May 2021. Original tickets remain valid.",
-            'image' => "static/Mcfly-small.webp",
+            'image' => "static/mcfly-small.webp",
         ]);
         DB::table('events')->insert([
             'id' => 4,
