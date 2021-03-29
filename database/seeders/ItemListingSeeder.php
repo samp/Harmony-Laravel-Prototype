@@ -71,7 +71,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 7,
-            'name' => "Bouquet",
+            'name' => "Bouquet Twenty-One-Pilots",
             'keywords' => "Trench, Twenty-One-Pilots",
             'price' =>  18.99,
             'description' => "Standard length, Regular fit, Crew neck, Printed on the front",
@@ -80,7 +80,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 8,
-            'name' => "Dimmu Borgir Eonian T-shirt",
+            'name' => "Dimmu Borgir Eonian ",
             'keywords' => "Dimmu Borgir, Eonian, T-shirt",
             'price' =>  18.99,
             'description' => "Classic, generous, boxy fit, 100% preshrunk cotton. Professionally printed using the latest and best digital print technology.",
@@ -89,7 +89,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 9,
-            'name' => "One More Time Dad Hat",
+            'name' => "One More Time Dad Hat - Britney Spears",
             'keywords' => "Glory, Britney Spears",
             'price' =>  20.00,
             'description' => "Pink dad cap with adjustable backing and embroidered, white flower detail on the front.",
@@ -116,7 +116,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 12,
-            'name' => "Melodrama Hands Tee",
+            'name' => "Melodrama Hands",
             'keywords' => "lorde t-shirt, melodrama merch, black band t shirt, cotton top",
             'price' =>  20.00,
             'description' => "Black cotton T-shirt featuring  lordes melodrama, available in multiple sizes",
@@ -125,7 +125,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 13,
-            'name' => "Scissor Sisters Phone Case",
+            'name' => "Scissor Sisters Case",
             'keywords' => "iPhone 12 case, scissor sisters phone case, laura iPhone Case, Clear phone case, Magic Hour",
             'price' =>  15.00,
             'description' => "Durable flexible case that grips around the edges of your phone",
@@ -134,7 +134,7 @@ class ItemListingSeeder extends Seeder
         ]);
         DB::table('item_listings')->insert([
             'id' => 14,
-            'name' => "Still First In Space Tie-Dye T-Shirt",
+            'name' => "Still First In Space Tie-Dye",
             'keywords' => "tie dye t shirt, pink floyd top, pink floyd t shirt, still first in space, pink floyd merch, vintage apparel, The Dark Side of The Moon",
             'price' =>  30.00,
             'description' => "Hand-dyed in LA, this 100% ring-spun cotton tee is soft, comfortable and pre-shrunk. Each tee is individually dyed so patterns, colors, and shirt color will vary.",
