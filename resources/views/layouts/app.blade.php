@@ -23,21 +23,23 @@
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="{{ asset('fa/css/all.css') }}"" rel=" stylesheet">
+    <link href="{{ asset('fa/css/all.css') }}" rel=" stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    {{ $scripts ?? "" }}
 </head>
 
 <body class="font-sans antialiased w-100">
-    <div class="flex flex-col min-h-screen bg-gray-100">
+    <div class="flex flex-col min-h-screen bg-gray-100 dark:bg-truegray-900">
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="flex-grow max-w-screen-lg m-auto my-5 px-4 lg:px-0 font-opensans">
+        <main class="flex-grow max-w-screen-lg m-auto my-5 px-4 sm:px-6 lg:px-8 font-opensans">
             {{ $slot }}
         </main>
 

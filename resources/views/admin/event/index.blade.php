@@ -3,20 +3,27 @@
         Events
     </x-slot>
 
-    <div class="mt-5">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row bg-white rounded-xl shadow overflow-hidden">
-                <div class="p-6">
-                    <h1>Events</h1>
-                    @foreach($events as $event)
-                        <p>{{ $event->artist }} - {{ $event->name }} ({{ $event->location }} @ {{ $event->time }}) [{{ $event->description}}]</p>
-                        <a href="{{ route('admin.event') . '/' . $event->id . '/edit' }}">Update / Delete</a>
-                        <img src="/storage/{{ $event->image }}"> 
-                    @endforeach
-
-                    <a href="{{ route('admin.event.create') }}">Create</a>
+    <x-card class="flex-col p-6">
+        <div class="flex flex-row items-center justify-between mb-2">
+            <h1 class="text-3xl font-poppins">Events</h1>
+            <x-button-link :href="route('admin.event.create')" class="ml-4">
+                {{ 'Create' }}
+            </x-button-link>
+        </div>
+        @foreach ($events as $event)
+            <div class="flex flex-row py-4 justify-between">
+                <div>
+                    <p>{{ $event->artist }} - {{ $event->name }} ({{ $event->location }} @
+                        {{ $event->time }})
+                        [{{ $event->description }}]</p>
+                </div>
+                <div class="ml-4">
+                    <x-button-link :href="route('admin.event') . '/' . $event->id . '/edit'">
+                        {{ 'Edit' }}
+                    </x-button-link>
                 </div>
             </div>
-        </div>
-    </div>
+
+        @endforeach
+    </x-card>
 </x-app-layout>
