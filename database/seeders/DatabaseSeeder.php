@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             ItemListingSeeder::class,
             ItemSeeder::class,
+            CarouselSeeder::class,
         ]);
     }
 }
