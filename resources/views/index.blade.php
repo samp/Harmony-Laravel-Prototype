@@ -9,17 +9,17 @@
     </x-slot>
 
     <div
-        class="w-full h-56 sm:h-72 md:h-96 mb-6 bg-gray-500 flex justify-center items-center rounded-xl shadow overflow-hidden">
-        <div class="main-carousel w-full" data-flickity='{ "cellAlign": "left", "contain": true }'>
+        class="w-full h-56 sm:h-72 md:h-96 bg-gray-500 flex justify-center items-center rounded-xl shadow overflow-hidden">
+        <div class="main-carousel w-full" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "imagesLoaded": true }'>
             @foreach ($carousel as $carouselcell)
                 <div class="carousel-cell w-full"><a href="{{ $carouselcell->link }}"><img
-                            src="{{ 'storage/' . $carouselcell->image }}" class="object-cover w-full"
+                            src="{{ 'storage/' . $carouselcell->image }}" class="object-cover w-full h-auto"
                             alt="{{ $carouselcell->description }}"></a></div>
             @endforeach
         </div>
     </div>
 
-    <div>
+    <div class="mt-6">
         <h2 class="text-3xl font-poppins mb-2 dark:text-white">New releases</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
             @foreach ($albumlistings as $albumlisting)
