@@ -29,17 +29,36 @@
                 @foreach ($albumlisting->albums as $album)
 
                     @if (is_null($album->stock) or $album->stock > 0)
+                        @if ($album->format != $selectedalbum->format)  
+                            <div
+                                class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
+                                <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
+                                    <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
+                                        {{ formatmoney($album->price) }}
+                                    </h1>
+                                    <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
+                                </a>
+                            </div>
+                        @else
                         <div
-                            class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
-                            <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
-                                <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
-                                    {{ formatmoney($album->price) }}
-                                </h1>
-                                <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
-                            </a>
-                        </div>
+                                class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 hover:border-purple-400 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white border-transparent transition-colors">
+                                <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
+                                    <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
+                                        {{ formatmoney($album->price) }}
+                                    </h1>
+                                    <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
+                                </a>
+                            </div>
+                        @endif
                     @endif
                 @endforeach
+
+                <form action="/cart/add/album/{{ $selectedalbum->id }}" method="POST">
+                    @CSRF
+                    <button>
+                        Add to Cart
+                    </button>
+                </form>
             </div>
         </div>
     </x-card>

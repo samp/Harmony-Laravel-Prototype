@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\Models\Track;
-use App\Models\Item;
+use App\Models\Album;
 use View;
 
 class CartController extends Controller
@@ -40,7 +40,7 @@ class CartController extends Controller
         unset($cart[$cartitem]);
         $request->session()->put('cart', $cart);
 
-        return back();
+        return redirect(route('cart'));
     }
 
     public function addTrackToCart(Track $track, Request $request)
@@ -48,7 +48,16 @@ class CartController extends Controller
         $item = array('name' => $track->disc->album->albumlisting->artist . ' - ' . $track->name, 'price' => $track->price);
         $request->session()->push('cart', $item);
     
-        Session::flash('cartsuccess', 'Added "' . $track->disc->album->albumlisting->artist . ' - ' . $track->name . '" to your cart');
+        Session::flash('cartsuccess', 'Added "' . $track->name . '" from ' . $track->disc->album->albumlisting->artist . "'s album " .  $track->disc->album->albumlisting->name . ' to your cart');
+        return back();
+    }
+
+    public function addAlbumToCart(Album $album, Request $request)
+    {
+        $item = array('name' => $album->albumlisting->artist . ' - ' . $album->albumlisting->name . ' (' . $album->format . ')', 'price' => $album->price);
+        $request->session()->push('cart', $item);
+
+        Session::flash('cartsuccess', 'Added ' . $album->albumlisting->artist . "'s album \"" . $album->albumlisting->name . '" (' . $album->format . ') to your cart');
         return back();
     }
 

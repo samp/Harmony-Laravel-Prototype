@@ -52,11 +52,11 @@
             <!-- Cart -->
             <div class="flex flex-row">
                 <div class="-mr-2 flex items-center sm:hidden">
-                    <button
+                    <a href="{{ route('cart') }}"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-truegray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                         <div class="h-8 w-8"><span class="leading-8 align-middle text-xl"><i
                                     class="fas fa-shopping-cart"></i></span></div>
-                    </button>
+                    </a>
                 </div>
                 <!-- Hamburger -->
                 <div class="-mr-2 ml-4 flex items-center sm:hidden">
