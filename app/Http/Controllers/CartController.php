@@ -40,7 +40,7 @@ class CartController extends Controller
         unset($cart[$cartitem]);
         $request->session()->put('cart', $cart);
 
-        return back();
+        return redirect(route('cart'));
     }
 
     public function addTrackToCart(Track $track, Request $request)
