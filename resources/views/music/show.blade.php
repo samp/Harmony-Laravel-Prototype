@@ -97,7 +97,12 @@
                             @endif
                         </p>
                         @if ($track->buyable)
-                            <a href="#"><i class="fas fa-plus"></i></a>
+                            <form action="/cart/add/track/{{ $track->id }}" method="post">
+                            @csrf
+                                <button>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </form>
                         @endif
                     </div>
 

@@ -19,6 +19,9 @@ Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'
 Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow'])->name('merchshow');
 
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+Route::post('/cart/clear', [App\Http\Controllers\CartController::class, 'clearCart']);
+Route::post('/cart/remove/{cartitem}', [App\Http\Controllers\CartController::class, 'removeItem']);
+Route::post('/cart/add/track/{track}', [App\Http\Controllers\CartController::class, 'addTrackToCart']);
 
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
