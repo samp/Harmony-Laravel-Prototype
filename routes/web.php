@@ -22,6 +22,7 @@ Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name
 Route::post('/cart/clear', [App\Http\Controllers\CartController::class, 'clearCart']);
 Route::post('/cart/remove/{cartitem}', [App\Http\Controllers\CartController::class, 'removeItem']);
 Route::post('/cart/add/track/{track}', [App\Http\Controllers\CartController::class, 'addTrackToCart']);
+Route::post('/cart/add/album/{album}', [App\Http\Controllers\CartController::class, 'addAlbumToCart']);
 
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
