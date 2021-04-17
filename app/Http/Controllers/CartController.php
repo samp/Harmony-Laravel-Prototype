@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Session;
 use App\Models\Track;
 use App\Models\Album;
+use App\Models\ItemListing;
+use App\Models\Item;
 use View;
 
 class CartController extends Controller
@@ -61,12 +63,16 @@ class CartController extends Controller
         return back();
     }
 
-    // public function addMerchToCart(Item $item, Request $request)
-    // {
-    //     // dd($item, $item->itemlisting->name);
-    //     Session::flash('cartsuccess', 'Added "' . $item->itemlisting->name . ' (' . $item ->size . ')" to you cart');
-    //     return back();
-    // }
+    public function addMerchToCart(ItemListing $itemlisting, Request $request)
+    {
+        $size = Item::where('id', $request->size)->first()->size;
+        $item = array('name' => $itemlisting->name . ' (' . $itemlisting->type . ' - ' . $size . ')', 'price' => $itemlisting->price);
+
+        $request->session()->push('cart', $item);
+
+        Session::flash('cartsuccess', 'Added "' . $itemlisting->name . ' (' . $itemlisting->type . ' - ' . $size . ')" to your cart');
+        return back();
+    }
 
     // public function addEventToCart(Request $request)
     // {

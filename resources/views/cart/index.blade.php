@@ -14,7 +14,7 @@
                             <div class="flex-grow pr-4">
                                 {{ $cartitem["name"] }}
                             </div>
-                            <p>{{ $cartitem["price"] }}</p>
+                            <p>{{ formatmoney($cartitem["price"]) }}</p>
                         </div>
                          
                     </div>
@@ -33,7 +33,7 @@
             </div>
 
             <div>
-                Total: {{ $total }}
+                Total: {{ formatmoney($total) }}
             </div>
 
             <form action="/cart/clear" method="POST">

@@ -23,6 +23,7 @@ Route::delete('/cart/clear', [App\Http\Controllers\CartController::class, 'clear
 Route::delete('/cart/remove/{cartitem}', [App\Http\Controllers\CartController::class, 'removeItem']);
 Route::post('/cart/add/track/{track}', [App\Http\Controllers\CartController::class, 'addTrackToCart']);
 Route::post('/cart/add/album/{album}', [App\Http\Controllers\CartController::class, 'addAlbumToCart']);
+Route::post('/cart/add/merch/{itemlisting}', [App\Http\Controllers\CartController::class, 'addMerchToCart']);
 
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
