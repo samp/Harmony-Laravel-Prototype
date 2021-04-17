@@ -18,6 +18,8 @@ Route::get('/events/{event}', [App\Http\Controllers\EventController::class, 'sho
 Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
 Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow'])->name('merchshow');
 
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');

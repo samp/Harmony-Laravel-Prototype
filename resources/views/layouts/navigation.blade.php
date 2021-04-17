@@ -26,7 +26,7 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex">
-                <x-nav-link :href="route('index')">
+                <x-nav-link :href="route('cart')" :active="request()->routeIs('cart*')">
                     {{ __('Cart') }}
                 </x-nav-link>
                 <div class="hidden sm:flex sm:ml-6">
