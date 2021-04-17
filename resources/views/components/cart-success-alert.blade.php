@@ -4,6 +4,10 @@
         <div>
             <p class="font-bold">Cart</p>
             <p class="text-sm">{{ Session::get('cartsuccess') }}</p>
+            <div class="flex">
+                <div class="flex-grow"></div>
+                <a href="{{ route('cart') }}" class="text-xs font-bold underline">View Cart</a>
+            </div>
         </div>
     </div>
 </div>
