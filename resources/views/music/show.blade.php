@@ -71,32 +71,32 @@
                     {{ $albumlisting->description }}
                 </p>
             </x-card>
-            <x-card class="flex-col">
-                @forelse($merch as $merchitem)
-                    <div class="flex flex-row @if (!$loop->last) mb-4 @endif">
-                        <picture class="w-44">
-                            <source srcset="{{ '../storage/' . $merchitem->product_image }}">
-                            <img class="w-full h-full object-cover" src="{{ '../storage/' . $merchitem->product_image }}"
-                            alt="{{ $merchitem->name . ' cover image' }}">
-                        </picture>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <h3 class="text-xl font-medium font-poppins">{{ $merchitem->name }}</h3>
-                            <p class="">{{ formatmoney($merchitem->price) }}</p>
 
-                            <x-button-link :href="route('merch') . '/' . $merchitem->id" class="mt-auto ml-auto">
-                                {{ 'Buy' }}
-                            </x-button-link>
+            @if($merch->count() > 1)
+                <x-card class="flex-col">
+                    @foreach($merch as $merchitem)
+                        <div class="flex flex-row @if (!$loop->last) mb-4 @endif">
+                            <picture class="w-44">
+                                <source srcset="{{ '../storage/' . $merchitem->product_image }}">
+                                <img class="w-full h-full object-cover" src="{{ '../storage/' . $merchitem->product_image }}"
+                                alt="{{ $merchitem->name . ' cover image' }}">
+                            </picture>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-xl font-medium font-poppins">{{ $merchitem->name }}</h3>
+                                <p class="">{{ formatmoney($merchitem->price) }}</p>
+
+                                <x-button-link :href="route('merch') . '/' . $merchitem->id" class="mt-auto ml-auto">
+                                    {{ 'View' }}
+                                </x-button-link>
+                            </div>
                         </div>
-                    </div>
-
-                @empty
-                    <p class="p-4">There are no related products to display.</p>
-                @endforelse
-
-            </x-card>
+                    @endforeach
+                </x-card>
+            @endif
+            
         </div>
 
-        <x-card class="flex-col p-4">
+        <x-card class="flex-col p-4 mt-4 md:mt-0">
             <h3 class="text-xl font-medium font-poppins">{{ $selectedalbum->format }} Track Listing </h3>
             @foreach ($selectedalbum->discs as $disc)
                 <h4 class="ml-3 text-lg font-medium font-poppins">{{ $disc->name }}</h4>
