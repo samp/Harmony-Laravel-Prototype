@@ -38,7 +38,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4">
         @forelse ($itemlistings as $item)
             <x-card class="flex-row md:flex-col lg:flex-row">
-                <picture class="w-52 md:w-full lg:w-52 aspect-w-1">
+                <picture class="w-52 md:w-full md:h-64 lg:w-52 aspect-w-1">
                     <source srcset="{{ 'storage/' . $item->product_image }}">
                     <img class="w-full h-full object-cover" src="{{ 'storage/' . $item->product_image }}"
                         alt="{{ $item->name . ' cover image' }}">
@@ -51,7 +51,7 @@
                     </div>
 
                     <x-button-link :href="route('merch') . '/' . $item->id" class="mt-auto ml-auto">
-                        {{ 'Buy' }}
+                        {{ 'View' }}
                     </x-button-link>
                 </div>
             </x-card>

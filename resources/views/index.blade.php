@@ -45,7 +45,7 @@
                             @endforeach
                         </div>
                         <x-button-link :href="route('music') . '/' . $albumlisting->id" class="mt-auto ml-auto">
-                            {{ 'Buy' }}
+                            {{ 'View' }}
                         </x-button-link>
                     </div>
                 </x-card>
@@ -72,7 +72,7 @@
                             </div>
 
                             <x-button-link :href="route('merch') . '/' . $item->id" class="mt-auto ml-auto">
-                                {{ 'Buy' }}
+                                {{ 'View' }}
                             </x-button-link>
                         </div>
 
