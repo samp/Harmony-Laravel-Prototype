@@ -66,9 +66,14 @@
                         </picture>
                         <div class="p-4 flex flex-col flex-grow">
                             <h3 class="font-medium font-poppins text-xl">{{ $item->name }}</h3>
-                            <h3 class="text-lg font-poppins">{{ $item->artist }}</h3>
+                            <h4 class="text-md font-poppins">{{ $item->artist }}</h4>
                             <div class="py-2">
                                 <p>{{ Str::limit($item->description, 200) }}</p>
+                            </div>
+
+                            <div class="flex">
+                                <div class="flex-grow"></div>
+                                <h5 class="text-lg font-poppins pt-1">{{ formatmoney($item->price) }}</h5>
                             </div>
 
                             <x-button-link :href="route('merch') . '/' . $item->id" class="mt-auto ml-auto">
@@ -119,7 +124,7 @@
                     class="w-60 bg-white dark:bg-truegray-600 dark:placeholder-truegray-100 rounded-lg text-sm border-2 border-purple-400 mr-4 h-12">
                 <div>
                     <x-button type="submit" name="submit">
-                        {{ 'Sign up' }}
+                        {{ 'Sign-up' }}
                     </x-button>
                 </div>
             </form>

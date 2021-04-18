@@ -50,7 +50,9 @@
                         <p>{{ Str::limit($item->description, 50) }}</p>
                     </div>
 
-                    <x-button-link :href="route('merch') . '/' . $item->id" class="mt-auto ml-auto">
+                    <h5 class="mt-auto ml-auto text-md font-poppins">{{ formatmoney($item->price) }}</h5>
+
+                    <x-button-link :href="route('merch') . '/' . $item->id" class="ml-auto">
                         {{ 'View' }}
                     </x-button-link>
                 </div>
