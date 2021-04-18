@@ -6,7 +6,7 @@
             <div class="flex">
                 <picture class="w-16 h-10">
                     <source srcset="{{ '../storage/' . Session::get('cartsuccessimage') }}">
-                    <img class="w-16" src="{{ '../storage/' . Session::get('cartsuccessimage') }}" alt="Cart item image">
+                    <img class="w-16 rounded" src="{{ '../storage/' . Session::get('cartsuccessimage') }}" alt="Cart item image">
                 </picture>
                 <p class="text-sm ml-2">{{ Session::get('cartsuccess') }}</p>
             </div>
