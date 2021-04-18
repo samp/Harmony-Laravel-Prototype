@@ -62,7 +62,7 @@
                     </div>
 
                     <x-button-link :href="route('music') . '/' . $albumlisting->id" class="mt-auto ml-auto">
-                        {{ 'Buy' }}
+                        {{ 'View' }}
                     </x-button-link>
 
                 </div>
