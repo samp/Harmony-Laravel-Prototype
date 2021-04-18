@@ -46,7 +46,7 @@ class AlbumSeeder extends Seeder
             'id' => 5,
             'format' => "Vinyl",
             'price' => 14.99,
-            'stock' => 4,
+            'stock' => 0,
             'album_listing_id' => 2
         ]);
         DB::table('albums')->insert([
