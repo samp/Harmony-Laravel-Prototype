@@ -7,6 +7,7 @@
         <h1 class="text-3xl font-poppins mb-2">Edit Album</h1>
         <form method="post" class="flex flex-col gap-4">
             @csrf
+            @method('patch')
             <div class="grid grid-cols-2 items-center">
                 <label for="format">Format:</label>
                 <input type="text" name="format" id="format" value="{{ $album->format }}"

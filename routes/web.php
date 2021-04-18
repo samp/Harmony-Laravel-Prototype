@@ -18,6 +18,13 @@ Route::get('/events/{event}', [App\Http\Controllers\EventController::class, 'sho
 Route::get('/merch', [App\Http\Controllers\SearchController::class, 'merchindex'])->name('merch');
 Route::get('/merch/{itemlisting}', [App\Http\Controllers\SearchController::class, 'merchshow'])->name('merchshow');
 
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+Route::delete('/cart/clear', [App\Http\Controllers\CartController::class, 'clearCart']);
+Route::delete('/cart/remove/{cartitem}', [App\Http\Controllers\CartController::class, 'removeItem']);
+Route::post('/cart/add/track/{track}', [App\Http\Controllers\CartController::class, 'addTrackToCart']);
+Route::post('/cart/add/album/{album}', [App\Http\Controllers\CartController::class, 'addAlbumToCart']);
+Route::post('/cart/add/merch/{itemlisting}', [App\Http\Controllers\CartController::class, 'addMerchToCart']);
+
 Route::middleware('can:adminAbility')->group(function() {
     Route::prefix('admin')->group(function() {
         Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');

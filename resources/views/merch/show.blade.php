@@ -17,19 +17,27 @@
                 <h1 class="text-4xl mb-2 font-medium font-poppins">
                     {{ $itemlisting->name }}
                 </h1>
-                <h2 class="text-3xl font-poppins">{{ $itemlisting->keywords }}</h2>
+                <h2 class="text-xs font-poppins">[{{ $itemlisting->keywords }}]</h2>
             </div>
 
             <div class="flex flex-col h-full">
                 <p>{{ $itemlisting->description }}</p>
                 <div class="flex flex-row justify-between">
                     <div class="grid grid-cols-2 items-center mt-4">
+                    <form action="/cart/add/merch/{{ $itemlisting->id }}" method="POST">
+                        @CSRF
                         <label for="size">Size:</label>
                         <select name="size" id="size" class="rounded-lg shadow border-gray-300 dark:border-transparent dark:bg-truegray-600 dark:placeholder-truegray-100">
                             @foreach ($itemlisting->items as $item)
                                 @if (is_null($item->stock) or $item->stock > 0)
+                                    @if(!$loop->first)
                                     <option value="{{ $item->id }}">
                                         {{ $item->size }}</option>
+                                    @else
+                                    <option value="{{ $item->id }}" selected>
+                                        {{ $item->size }}</option>
+                                    @endif
+
                                 @else
                                     <option value="{{ $item->id }}" disabled>
                                         {{ $item->size }}</option>
@@ -45,10 +53,11 @@
                 </div>
                 <div
                     class="mt-auto rounded-md border-2 w-auto ml-auto border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
-                    <a href="#" class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add
+                    <button class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add
                             to cart
-                        </span></a>
+                        </span></button>
                 </div>
+                </form>
             </div>
         </div>
     </x-card>

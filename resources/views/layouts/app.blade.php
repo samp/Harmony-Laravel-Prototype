@@ -43,6 +43,10 @@
             {{ $slot }}
         </main>
 
+        @if (Session::has('cartsuccess'))
+            <x-cart-success-alert></x-cart-success-alert>
+        @endif
+
         @include('layouts.footer')
     </div>
 </body>
