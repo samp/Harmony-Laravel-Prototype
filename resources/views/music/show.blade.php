@@ -55,9 +55,9 @@
 
                 <form action="/cart/add/album/{{ $selectedalbum->id }}" method="POST">
                     @CSRF
-                    <button>
-                        Add to Cart
-                    </button>
+                    <x-button class="mt-auto ml-auto">
+                        {{ 'Add to cart' }}
+                    </x-button>
                 </form>
             </div>
         </div>
