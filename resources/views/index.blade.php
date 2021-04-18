@@ -20,7 +20,7 @@
     </div>
 
     <div class="mt-6">
-        <h2 class="text-3xl font-poppins mb-2 dark:text-white">New releases</h2>
+        <h2 class="text-2xl font-poppins mb-2 dark:text-white">New releases</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
             @foreach ($albumlistings as $albumlisting)
                 <x-card class="flex-col">
@@ -55,7 +55,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div class="flex flex-col">
-            <h2 class="text-3xl font-poppins mb-2 dark:text-white">New Merch</h2>
+            <h2 class="text-2xl font-poppins mb-2 dark:text-white">New Merch</h2>
             <div class="flex flex-col">
                 @foreach ($itemlistings as $item)
                     <x-card class="flex-row md:flex-col lg:flex-row mb-4">
@@ -82,7 +82,7 @@
         </div>
 
         <div class="flex flex-col">
-            <h2 class="text-3xl font-poppins mb-2 dark:text-white">Events</h2>
+            <h2 class="text-2xl font-poppins mb-2 dark:text-white">Events</h2>
             <div class="flex flex-col">
                 @foreach ($events as $event)
 
@@ -110,7 +110,7 @@
         </div>
     </div>
 
-    <h2 class="text-3xl font-poppins mb-2 dark:text-white">Newsletter</h2>
+    <h2 class="text-2xl font-poppins mb-2 dark:text-white">Newsletter</h2>
     <x-card>
         <div class="p-4">
             <p class="mb-2">Be the first to know about new releases and events by signing up to our newsletter.</p>
