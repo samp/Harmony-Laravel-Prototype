@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-card class="flex-col p-6">
-        <h1 class="text-3xl font-poppins mb-2">Create Item</h1>
+        <h1 class="text-2xl font-poppins mb-2">Create Item</h1>
         <form method="post" class="flex flex-col gap-4">
             @csrf
             <div class="grid grid-cols-2 items-center">

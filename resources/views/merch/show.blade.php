@@ -51,12 +51,10 @@
                     </div>
 
                 </div>
-                <div
-                    class="mt-auto rounded-md border-2 w-auto ml-auto border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-white transition-colors">
-                    <button class="flex flex-row align-middle p-2 font-poppins"><span class="mx-2 text-xl">Add
-                            to cart
-                        </span></button>
-                </div>
+               
+                <x-button class="mt-auto ml-auto">
+                    {{ 'Add to cart' }}
+                </x-button>
                 </form>
             </div>
         </div>

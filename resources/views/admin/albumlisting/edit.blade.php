@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-card class="flex-col p-6">
-        <h1 class="text-3xl font-poppins mb-2">Edit Album Listing</h1>
+        <h1 class="text-2xl font-poppins mb-2">Edit Album Listing</h1>
         <form method="post" enctype="multipart/form-data" class="flex flex-col gap-4">
             @csrf
             @method('patch')

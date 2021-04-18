@@ -5,7 +5,7 @@
 
     <<x-card class="flex-col p-6">
         <div class="flex flex-row justify-between items-center mb-2">
-            <h1 class="text-3xl font-poppins">Item Listings</h1>
+            <h1 class="text-2xl font-poppins">Item Listings</h1>
             <x-button-link :href="route('admin.itemlisting.create')" class="ml-4">
                 {{ 'Create' }}
             </x-button-link>
