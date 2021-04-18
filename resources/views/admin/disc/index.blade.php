@@ -5,7 +5,7 @@
 
     <x-card class="flex-col p-6">
         <div class="flex flex-row items-center justify-between mb-2">
-            <h1 class="text-3xl font-poppins">Discs</h1>
+            <h1 class="text-2xl font-poppins">Discs</h1>
             <x-button-link :href="route('admin.disc.create')" class="ml-4">
                 {{ 'Create' }}
             </x-button-link>

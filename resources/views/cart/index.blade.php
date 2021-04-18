@@ -5,7 +5,7 @@
 
     <div class="flex flex-col gap-4">
         <x-card class="flex-col justify-between p-6">
-            <h2 class="text-3xl font-poppins">Cart</h2>
+            <h2 class="text-2xl font-poppins">Cart</h2>
             <div class="">
                 @forelse($cart as $key => $cartitem)
                 <div class="flex">

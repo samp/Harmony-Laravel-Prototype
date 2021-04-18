@@ -16,7 +16,7 @@
                 <h1 class="text-4xl mb-2 font-medium font-poppins">
                     {{ $albumlisting->name }}
                 </h1>
-                <h2 class="text-3xl font-poppins">{{ $albumlisting->artist }}</h2>
+                <h2 class="text-2xl font-poppins">{{ $albumlisting->artist }}</h2>
 
                 <div class="mt-2 md:mt-auto font-opensans">
                     <p>Genre: {{ $albumlisting->genre }}</p>
@@ -33,7 +33,7 @@
                             <div
                                 class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 border-purple-400 bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-colors">
                                 <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
-                                    <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
+                                    <h1 class="text-2xl md:text-2xl mb-2 font-semibold text-right">
                                         {{ formatmoney($album->price) }}
                                     </h1>
                                     <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
@@ -43,7 +43,7 @@
                         <div
                                 class="md:mb-5 md:mr-0 mr-5 rounded-md border-2 hover:border-purple-400 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white border-transparent transition-colors">
                                 <a href="?format={{ $album->format }}" class="block pt-3 pb-4 pl-5 pr-5 ">
-                                    <h1 class="text-2xl md:text-3xl mb-2 font-semibold text-right">
+                                    <h1 class="text-2xl md:text-2xl mb-2 font-semibold text-right">
                                         {{ formatmoney($album->price) }}
                                     </h1>
                                     <h2 class="text-xl md:text-2xl text-right">{{ $album->format }}</h2>
