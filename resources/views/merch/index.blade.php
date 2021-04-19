@@ -38,12 +38,12 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4">
         @forelse ($itemlistings as $item)
             <x-card class="flex-row md:flex-col lg:flex-row">
-                <picture class="w-52 md:w-full lg:w-52 aspect-w-1">
+                <picture class="w-52 md:w-full lg:w-52 aspect-w-1 min-w-1/2">
                     <source srcset="{{ 'storage/' . $item->product_image }}">
                     <img class="w-full h-full object-cover" src="{{ 'storage/' . $item->product_image }}"
                         alt="{{ $item->name . ' cover image' }}">
                 </picture>
-                <div class="p-4 flex flex-col flex-grow">
+                <div class="p-4 flex flex-col flex-grow max-w-1/2">
                     <h3 class="font-medium font-poppins text-xl">{{ $item->name }}</h3>
                     <h4 class="text-lg font-poppins">{{ $item->artist }}</h4>
                     <div class="py-4">
