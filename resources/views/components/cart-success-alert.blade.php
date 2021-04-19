@@ -3,7 +3,13 @@
     <div class="flex">
         <div>
             <p class="font-bold">Cart</p>
-            <p class="text-sm">{{ Session::get('cartsuccess') }}</p>
+            <div class="flex">
+                <picture class="w-16 h-10">
+                    <source srcset="{{ '../storage/' . Session::get('cartsuccessimage') }}">
+                    <img class="w-16 rounded" src="{{ '../storage/' . Session::get('cartsuccessimage') }}" alt="Cart item image">
+                </picture>
+                <p class="text-sm ml-2">{{ Session::get('cartsuccess') }}</p>
+            </div>
             <div class="flex">
                 <div class="flex-grow"></div>
                 <a href="{{ route('cart') }}" class="text-xs font-bold underline">View Cart</a>

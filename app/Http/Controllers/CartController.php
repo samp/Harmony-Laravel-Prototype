@@ -47,30 +47,33 @@ class CartController extends Controller
 
     public function addTrackToCart(Track $track, Request $request)
     {
-        $item = array('name' => $track->disc->album->albumlisting->artist . ' - ' . $track->name, 'price' => $track->price);
+        $item = array('name' => $track->disc->album->albumlisting->artist . ' - ' . $track->name, 'price' => $track->price, 'image' => $track->disc->album->albumlisting->cover_image);
         $request->session()->push('cart', $item);
     
         Session::flash('cartsuccess', 'Added "' . $track->name . '" from ' . $track->disc->album->albumlisting->artist . "'s album " .  $track->disc->album->albumlisting->name . ' to your cart');
+        Session::flash('cartsuccessimage', $track->disc->album->albumlisting->cover_image);
         return back();
     }
 
     public function addAlbumToCart(Album $album, Request $request)
     {
-        $item = array('name' => $album->albumlisting->artist . ' - ' . $album->albumlisting->name . ' (' . $album->format . ')', 'price' => $album->price);
+        $item = array('name' => $album->albumlisting->artist . ' - ' . $album->albumlisting->name . ' (' . $album->format . ')', 'price' => $album->price, 'image' => $album->albumlisting->cover_image);
         $request->session()->push('cart', $item);
 
         Session::flash('cartsuccess', 'Added ' . $album->albumlisting->artist . "'s album \"" . $album->albumlisting->name . '" (' . $album->format . ') to your cart');
+        Session::flash('cartsuccessimage', $album->albumlisting->cover_image);
         return back();
     }
 
     public function addMerchToCart(ItemListing $itemlisting, Request $request)
     {
         $size = Item::where('id', $request->size)->first()->size;
-        $item = array('name' => $itemlisting->name . ' (' . $itemlisting->type . ' - ' . $size . ')', 'price' => $itemlisting->price);
+        $item = array('name' => $itemlisting->name . ' (' . $itemlisting->type . ' - ' . $size . ')', 'price' => $itemlisting->price, 'image' => $itemlisting->product_image);
 
         $request->session()->push('cart', $item);
 
         Session::flash('cartsuccess', 'Added "' . $itemlisting->name . ' (' . $itemlisting->type . ' - ' . $size . ')" to your cart');
+        Session::flash('cartsuccessimage', $itemlisting->product_image);
         return back();
     }
 
