@@ -59,12 +59,12 @@
             <div class="flex flex-col">
                 @foreach ($itemlistings as $item)
                     <x-card class="flex-row md:flex-col lg:flex-row mb-4">
-                        <picture class="w-52 md:w-full lg:w-52">
+                        <picture class="w-52 md:w-full lg:w-52 min-w-1/2">
                             <source srcset="{{ 'storage/' . $item->product_image }}">
                             <img class="w-full h-full object-cover" src="{{ 'storage/' . $item->product_image }}"
                                 alt="{{ $item->name . ' cover image' }}">
                         </picture>
-                        <div class="p-4 flex flex-col flex-grow">
+                        <div class="p-4 flex flex-col flex-grow max-w-1/2">
                             <h3 class="font-medium font-poppins text-xl">{{ $item->name }}</h3>
                             <h4 class="text-md font-poppins">{{ $item->artist }}</h4>
                             <div class="py-2">
@@ -90,14 +90,13 @@
             <h2 class="text-2xl font-poppins mb-2 dark:text-white">Events</h2>
             <div class="flex flex-col">
                 @foreach ($events as $event)
-
                     <x-card class="flex-row md:flex-col lg:flex-row mb-4">
-                        <picture class="w-52 md:w-full lg:w-52">
+                        <picture class="w-52 md:w-full lg:w-52 min-w-1/2">
                             <source srcset="{{ 'storage/' . $event->image }}">
                             <img class="w-full h-full object-cover" src="{{ 'storage/' . $event->image }}"
                                 alt="{{ $event->name . ' cover image' }}">
                         </picture>
-                        <div class="p-4 flex flex-col flex-grow">
+                        <div class="p-4 flex flex-col flex-grow max-w-1/2">
                             <h3 class="font-medium font-poppins text-xl">{{ $event->name }}</h3>
                             <h3 class="text-lg font-poppins">{{ $event->artist }}</h3>
                             <div class="py-2">
