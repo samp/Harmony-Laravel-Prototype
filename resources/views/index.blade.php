@@ -39,7 +39,7 @@
                                     @if (is_null($album->stock) or $album->stock > 0)
                                         <span class="ml-auto">{{ formatmoney($album->price) }}</span>
                                     @else
-                                        <span class="ml-auto text-red-600">Out of stock</span>
+                                        <span class="ml-auto text-yellow-500">Out of stock</span>
                                     @endif
                                 </div>
                             @endforeach
