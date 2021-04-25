@@ -30,7 +30,7 @@ class ItemListingSeeder extends Seeder
             'price' =>  60.00,
             'description' => "Screenprinted front and back graphics",
             'type' => 'Hoodie',
-            'product_image' => "static/warped cover hoodie.png",
+            'product_image' => "static/warped-cover-hoodie.png",
         ]);
         DB::table('item_listings')->insert([
             'id' => 3,
