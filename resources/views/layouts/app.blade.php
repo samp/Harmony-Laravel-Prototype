@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title> {{ $title ?? '' }} - {{ config('app.name', 'Harmony Music Store') }}</title>
+    <meta name="description" content="Harmony Music Store is the home of all your favourite music, events, and merch!"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">

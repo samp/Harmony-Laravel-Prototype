@@ -5,7 +5,7 @@
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="{{ route('index') }}">
-                    <img class="block w-auto h-10" src="{{ asset('images/logo.png') }}">
+                    <img class="block w-auto h-10" alt="Harmony Music Store logo" src="{{ asset('images/logo.png') }}">
                 </a>
             </div>
 
