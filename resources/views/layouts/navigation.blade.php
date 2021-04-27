@@ -25,7 +25,7 @@
 
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex">
+            <div class="hidden sm:flex ml-auto">
                 <x-nav-link :href="route('cart')" :active="request()->routeIs('cart*')">
                     {{ __('Cart') }}
                 </x-nav-link>
@@ -40,6 +40,7 @@
                                 {{ auth()->user()->name }}
                             </x-nav-link>
                         @endcan
+                        
                     @endauth
                     @guest
                         <x-nav-link :href="route('login')">
