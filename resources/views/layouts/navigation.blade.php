@@ -36,8 +36,8 @@
                                 {{ __('Admin') }}
                             </x-nav-link>
                         @else
-                            <x-nav-link :href="route('index')">
-                                {{ __('Account') }}
+                            <x-nav-link :href="route('user')">
+                                {{ auth()->user()->name }}
                             </x-nav-link>
                         @endcan
                     @endauth

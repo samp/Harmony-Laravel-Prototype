@@ -11,6 +11,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->middleware('auth')->name('user');
+
 Route::get('/music', [App\Http\Controllers\SearchController::class, 'musicindex'])->name('music');
 Route::get('/music/{albumlisting}', [App\Http\Controllers\SearchController::class, 'musicshow'])->name('musicshow');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
