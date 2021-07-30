@@ -10,4 +10,5 @@ This was a group project in conjunction with:
  - [@Samp](https://github.com/samp) (User Interface and Designs)
  - [@RyanJelf](https://github.com/RyanJelf) - Images, Data Collection & Designs
  - [@NashWillock](https://github.com/NashWillock) - Images, Data Collection & Designs
+ 
 In this project I created the Data Model structures as well as organizing the Controller, URI on the Backend and offered support in the View components
