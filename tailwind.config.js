@@ -24,6 +24,9 @@ module.exports = {
                 '12': '3rem',
                 '14': '4rem',
             },
+            screens: {
+                'sm': '680px',
+            },
             colors: {
                 orange: colors.orange,
                 lime: colors.lime,
