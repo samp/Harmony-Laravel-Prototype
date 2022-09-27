@@ -3,7 +3,7 @@
     <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
+            <div class="flex-shrink-0 flex items-center mr-auto">
                 <a href="{{ route('index') }}">
                     <img class="block w-auto h-10" alt="Harmony Music Store logo" src="{{ asset('images/logo.png') }}">
                 </a>
